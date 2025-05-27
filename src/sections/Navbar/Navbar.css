@@ -33,17 +33,17 @@ OPCIONES DEL MENU CENTRAL
     gap: 2rem;
 }
 
-.navbar__link{
+.nav_link{
     cursor: pointer;
     transition: color 0.3s ease;
     color: var(--blanco-texto-navbar);
 }
 
-.navbar__link:hover {
+.nav_link:hover {
     color: white;
     opacity: 1;
 }
 
-.navbar__link.active {
+.nav_link.active_link {
     color: white;
 }

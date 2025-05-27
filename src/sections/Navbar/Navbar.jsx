@@ -20,9 +20,10 @@ import './Navbar.css';
 const Navbar = () => {
   const idioma = useIdioma();
   const [idiomaActual, setIdiomaActual] = useState('es');
-  const [activeSection, setActiveSection] = useState("home");
+  const [activeSection, setActiveSection] = useState('home'); // Estado para la sección activa
 
-  // Usamos los hooks personalizados
+
+  // Actualizamos el idioma actual cuando cambia el contexto
   useScrollEffect(secciones, setActiveSection); // Hook para manejar el scroll
 
   return (
@@ -34,21 +35,19 @@ const Navbar = () => {
       </div>
 
       <nav className="navbar__nav">
-        {secciones.map(({ id, texto, offset }) => (
-          <Link
-            key={id}
-            to={id}
-            smooth={true}
-            duration={500}
-            offset={offset}
-            spy={true}
-            className={`navbar__link ${activeSection === id ? "active" : ""}`}
-          >
-            {texto[idiomaActual]}
-          </Link>
-
-
-        ))}
+        {secciones.filter(({ id }) => id !== 'historia')
+          .map(({ id, texto, offset }) => (
+            <Link
+              key={id}
+              to={id}
+              smooth={true}
+              duration={800}
+              offset={offset}
+              className={`nav_link ${activeSection === id ? "active_link" : ""
+                }`}          >
+              {texto[idiomaActual]}
+            </Link>
+          ))}
       </nav>
 
       <div className="navbar__selector">
