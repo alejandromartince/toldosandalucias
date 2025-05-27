@@ -4,7 +4,7 @@ import { informacionBoton } from "../../constants/infoBotones";  // Asegúrate d
 
 import "./BotonLinea.css";
 
-const LinkLinea = ({ idioma, className, id }) => {
+const LinkLinea = ({ idioma, className, id, offset }) => {
   const boton = informacionBoton(idioma, id);
 
   return (
@@ -14,7 +14,7 @@ const LinkLinea = ({ idioma, className, id }) => {
       tabIndex="0"
       smooth={true}
       to={boton ? boton.url : "#"}
-      offset={boton ? boton.offset : 0}
+      offset={offset || 0}
       style={{ textDecoration: "none", cursor: "pointer" }}
     >
       {boton ? boton.texto : "Texto no disponible"}

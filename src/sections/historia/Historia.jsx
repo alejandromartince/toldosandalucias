@@ -34,7 +34,7 @@ const Historia = () => {
           </div>
           <br />
           <br />
-          <LinkLinea idioma={idioma} id="Historia" className="boton-linea" />
+          <LinkLinea idioma={idioma} offset={0} id="Historia" className="boton-linea" />
         </div>
         <div className="historia-logo">
           <img src="/assets/Logo/1999_blanco.png" alt="logo1999" />
