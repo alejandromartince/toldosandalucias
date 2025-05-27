@@ -65,7 +65,7 @@ OPCIONES DE LA BARRA DE PROGRESO
   top: 4rem;
   left: 0;
   height: 4px;
-  background-color: white; /* o el color que prefieras */
+  background-color: var(--blanco); /* o el color que prefieras */
   z-index: 20;
   transition: width 0.2s ease-out;
 }
@@ -86,12 +86,12 @@ OPCIONES DEL MENU CENTRAL
 }
 
 .nav_link:hover {
-  color: white;
+  color: var(--blanco);
   opacity: 1;
 }
 
 .nav_link.active_link {
-  color: white;
+  color: var(--blanco);
 }
 
 /* ===============================
@@ -118,7 +118,7 @@ OPCIONES DEL SELECTOR DE IDIOMA
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: white;
+  background-color: var(--blanco);
   border-radius: 6px;
   margin-top: 5px;
   z-index: 10;
