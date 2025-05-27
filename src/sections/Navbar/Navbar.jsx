@@ -4,6 +4,7 @@ import { Link } from "react-scroll";
 
 //Importamos el hook personalizado para manejar el scroll
 import { useScrollEffect } from '../../Hooks/Navbar/useScrollEffect'
+import useScrollPositionY from '../../Hooks/useScrollPositionY';
 
 //Importamos la info
 import { secciones } from '../../constants/infoNavbar';
@@ -23,9 +24,17 @@ const Navbar = () => {
 
   // Actualizamos el idioma actual cuando cambia el contexto
   useScrollEffect(secciones, setActiveSection); // Hook para manejar el scroll
+  const scrollY = useScrollPositionY();
+
+  const scrollYProgress = (() => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    return docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  })();
 
   return (
-    <header className="navbar">
+    <header className={`navbar ${scrollY > 100 ? 'navbar__scrolled' : ''}`}>
+      
       <div className="navbar__logo">
         <Link to="home" spy={true} smooth={true} duration={1000}>
           <img src="/assets/Logo/Logo_Transparent.png" alt="Logo" />
@@ -47,9 +56,10 @@ const Navbar = () => {
           ))}
       </nav>
 
-      <div className="navbar__selector">
+      <div className="navbar_selector">
         <SelectorIdioma />
       </div>
+      <div className="navbar__progress-bar" style={{ width: `${scrollYProgress}%` }}></div>
     </header>
   );
 };
