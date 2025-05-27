@@ -1,0 +1,151 @@
+/*===========================
+OPCIONES GENERALES
+============================*/
+.home {
+  position: relative;
+  z-index: 1;
+}
+
+.home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.849), rgba(0, 0, 0, 0));
+  z-index: -1;
+}
+
+.home::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/Fondo/fondo_inicio.jpeg');
+  background-size: cover;
+  background-position: bottom;
+  transform: scaleX(-1);
+  z-index: -2;
+}
+
+.home-container {
+  height: 100vh;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+}
+
+/*===========================
+OPCIONES IZQUIERDA
+============================*/
+.home-left-container {
+  grid-area: 1 / 1 / 2 / 3;
+  padding: 0 2rem 0 6rem;
+  text-align: justify;
+}
+
+/*===========================
+OPCIONES DERECHA
+============================*/
+.home-right-container {
+  grid-area: 1 / 1 / 2 / 6;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.model-home-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*===========================
+RESPONSIVE PARA PANTALLAS MENOR A 1600px
+============================*/
+
+@media (max-width: 1600px) and (min-width: 1200px) {
+  .model-home-container {
+    width: 100%;
+  }
+
+  .home-left-container {
+    padding: 0 0rem 0 4rem;
+  }
+
+  .home p {
+    font-size: 1rem;
+    padding: 0 4rem 0 0;
+    line-height: 1.8rem;
+  }
+}
+
+/*===========================
+RESPONSIVE PARA PANTALLAS MENOR A 1200px
+============================*/
+@media (max-width: 1200px) and (min-width: 768px) {
+  .home-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Una sola columna */
+    grid-template-rows: auto auto;
+    /* Dos filas automáticas */
+    padding: 8rem 2rem 2rem 0;
+  }
+
+  .home-left-container {
+    grid-row: 1;
+    /* Ocupa la primera fila */
+  }
+
+  .home-right-container {
+    grid-row: 2;
+    /* Ocupa la segunda fila */
+  }
+
+
+}
+
+/*===========================
+RESPONSIVE PARA PANTALLAS MENOR A 768px (móviles)
+============================*/
+
+@media (max-width: 768px) {
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .home-right-container-mobile img {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5rem;
+  }
+
+  .home-left-container {
+    padding: 0 1rem;
+    margin-top: 2rem;
+  }
+
+  .home-right-container {
+    width: 100%;
+    height: 50%;
+  }
+
+  .home p {
+    font-size: 1rem;
+    /* Reducir aún más el tamaño del texto */
+  }
+
+  .boton-container {
+    margin-top: 2rem;
+  }
+}

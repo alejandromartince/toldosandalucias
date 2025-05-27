@@ -1,0 +1,49 @@
+/* ===============================
+OPCIONES GENERALES
+=============================== */
+header {
+    font-family: "Open Sans", sans-serif;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    background-color: transparent;
+    background-color: transparent;
+    z-index: 10;
+}
+
+/* ===============================
+OPCIONES DE LA LOGO
+=============================== */
+
+.navbar__logo img {
+    height: 2.5rem;
+}
+
+/* ===============================
+OPCIONES DEL MENU CENTRAL 
+=============================== */
+.navbar__nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar__link{
+    cursor: pointer;
+    transition: color 0.3s ease;
+    color: var(--blanco-texto-navbar);
+}
+
+.navbar__link:hover {
+    color: white;
+    opacity: 1;
+}
+
+.navbar__link.active {
+    color: white;
+}
