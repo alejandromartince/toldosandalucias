@@ -1,5 +1,3 @@
-import React from "react";
-
 //Importamos lo necesario para el carrusel
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
@@ -8,13 +6,17 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 //Importamos las fotos
-import { imagesNuestrosTrabajos } from "../constants/infoNuestrosTrabajos";
+import { imagesNuestrosTrabajos } from "../../constants/infoNuestrosTrabajos";
+
+//Importamos el contexto del idioma
+import { useIdioma } from "../../Contexts/IdiomaContext";
 
 //Importamos estilos
-import "../sections/nuestrosTrabajos/nuestrosTrabajos.css";
+import "../../sections/nuestrosTrabajos/nuestrosTrabajos";
 
 const CarruselTrabajos = () => {
   const trabajos = imagesNuestrosTrabajos;
+  const { idioma } = useIdioma(); // Obtén el idioma desde el contexto
 
   return (
     <div className="carrusel-container">
@@ -32,7 +34,7 @@ const CarruselTrabajos = () => {
         {trabajos.map((trabajo, index) => (
           <SwiperSlide key={index} className="swiper-slide">
             <div className="slide-container">
-              <h3 className="image-title">{trabajo.titulo}</h3> {/* Titulo del trabajo */}
+              <h3 className="image-title">{trabajo.titulo[idioma]}</h3> {/* Titulo del trabajo */}
               <div className="watermark-container">
                 <span className="watermark-text">Toldos Andalucía</span>
               </div>

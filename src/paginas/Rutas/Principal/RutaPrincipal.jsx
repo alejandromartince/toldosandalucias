@@ -1,5 +1,5 @@
 //Importamos las secciones principales
-import Navbar from "../../../sections/navbar/Navbar";
+import Navbar from "../../../sections/Navbar/Navbar";
 import Home from "../../../sections/home/Home";
 import Products from "../../../sections/Products/Products";
 import Historia from "../../../sections/Historia/Historia";
@@ -8,7 +8,7 @@ import Contacto from "../../../sections/Contacto/Contacto";
 import Footer from "../../../sections/Footer/Footer";
 
 //Importamos los hooks
-import PantallaCarga from "../../../components/PantallaCarga";
+import PantallaCarga from "../../../components/General/PantallaCarga";
 
 //Importamos los estilos
 import './RutaPrincipal.css'

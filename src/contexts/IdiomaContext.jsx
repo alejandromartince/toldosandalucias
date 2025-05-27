@@ -1,5 +1,5 @@
 // src/contexts/IdiomaContext.js
-import React, { createContext, useState, useContext } from 'react';
+import { createContext, useState, useContext } from 'react';
 
 // Creamos el contexto para el idioma
 const IdiomaContext = createContext();

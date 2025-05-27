@@ -1,4 +1,3 @@
-import React from "react";
 
 //Importamos los estilos obligatorios para que el swiper funcione
 import "swiper/css";
@@ -7,10 +6,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 //Importamos los componentes
-import CarruselTrabajos from "../../components/carrouselTrabajos";
+import CarruselTrabajos from "../../components/Trabajos/carrouselTrabajos";
 
 //Importamos los estilos
-import "./NuestrosTrabajos.css"; // Archivo de estilos
+import "../nuestrosTrabajos/nuestrosTrabajos.css"; // Archivo de estilos
 
 const NuestrosTrabajos = () => {
  

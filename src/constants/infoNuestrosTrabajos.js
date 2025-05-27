@@ -4,25 +4,41 @@ export const infoNuestrosTrabajos = {
   },
   en: { titulo: "Our works" },
 };
+// src/constants/imagesNuestrosTrabajos.js
 export const imagesNuestrosTrabajos = [
   {
     imagen: "/assets/SliderTrabajos/Cortina-1.jpeg",
-    titulo: "Cortina",
+    titulo: {
+      es: "Cortina",
+      en: "Curtain",
+    },
   },
   {
     imagen: "/assets/SliderTrabajos/Pergola-1.jpg",
-    titulo: "Pérgola",
+    titulo: {
+      es: "Pérgola",
+      en: "Pergola",
+    },
   },
   {
     imagen: "/assets/SliderTrabajos/Cortina-2.jpeg",
-    titulo: "Cortina",
+    titulo: {
+      es: "Cortina",
+      en: "Curtain",
+    },
   },
   {
     imagen: "/assets/SliderTrabajos/Vela-1.jpeg",
-    titulo: "Vela",
+    titulo: {
+      es: "Vela",
+      en: "Sail",
+    },
   },
   {
     imagen: "/assets/SliderTrabajos/Terraza-1.jpg",
-    titulo: "Terraza",
+    titulo: {
+      es: "Terraza",
+      en: "Terrace",
+    },
   },
 ];

@@ -1,34 +1,29 @@
 //Importamos los hooks de React
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Link } from "react-scroll";
 
 //Importamos el hook personalizado para manejar el scroll
 import { useScrollEffect } from '../../Hooks/Navbar/useScrollEffect'
 
 //Importamos la info
-import { idiomas, secciones } from '../../constants/infoNavbar';
+import { secciones } from '../../constants/infoNavbar';
 
-// import SelectorIdiomas from './SelectorIdiomas';
-import SelectorIdiomas from '../../Components/Navbar/SelectorIdiomas';
+//Importamos el contexto del idioma
+import { useIdioma } from "../../Contexts/IdiomaContext";
 
-//Importamos el contexto de idioma
-import { useIdioma } from '../../Contexts/IdiomaContext';
+//Importamos los compoententes
+import SelectorIdioma from '../../components/Navbar/SelectorIdioma';
 
 //Importamos los estilos
 import './Navbar.css';
 
 const Navbar = () => {
-  const idioma = useIdioma();
-  const [idiomaActual, setIdiomaActual] = useState('es');
+  const { idioma } = useIdioma(); // Obtén el idioma desde el contexto
   const [activeSection, setActiveSection] = useState('home'); // Estado para la sección activa
-  const [scrollY, setScrollY] = useState(window.scrollY);
-
 
   // Actualizamos el idioma actual cuando cambia el contexto
   useScrollEffect(secciones, setActiveSection); // Hook para manejar el scroll
-   
 
-  
   return (
     <header className="navbar">
       <div className="navbar__logo">
@@ -46,14 +41,14 @@ const Navbar = () => {
               smooth={true}
               duration={800}
               offset={offset}
-              className={`nav_link ${activeSection === id ? "active_link" : ""
-                }`}          >
-              {texto[idiomaActual]}
+              className={`nav_link ${activeSection === id ? "active_link" : ""}`}>
+              {texto[idioma]}
             </Link>
           ))}
       </nav>
 
       <div className="navbar__selector">
+        <SelectorIdioma />
       </div>
     </header>
   );
