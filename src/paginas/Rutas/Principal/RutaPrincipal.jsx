@@ -2,6 +2,7 @@
 import Navbar from "../../../sections/Navbar/Navbar";
 import Home from "../../../sections/home/Home";
 import Products from "../../../sections/Products/Products";
+import Beneficios from "../../../sections/Beneficios/Beneficios";
 import Historia from "../../../sections/Historia/Historia";
 import NuestrosTrabajos from "../../../sections/nuestrosTrabajos/nuestrosTrabajos";
 import Contacto from "../../../sections/Contacto/Contacto";
@@ -26,6 +27,7 @@ const RutaPrincipal = ({ cargando }) => {
         <Historia />
         <NuestrosTrabajos />
         <Products />
+        <Beneficios />
         <Contacto />
         <Footer />
       </div>

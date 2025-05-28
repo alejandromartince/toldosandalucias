@@ -1,0 +1,81 @@
+.beneficios {
+    width: 100%;
+    height: 100vh;
+    padding: 60px 20px;
+    background-image: url(/assets/Fondo/fondo_resto.png);
+}
+
+.encabezado {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.encabezado h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.encabezado p {
+    font-size: 1rem;
+    color: var(--blanco);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contenedor-beneficios {
+    display: flex;
+    height: 400px;
+    overflow: hidden;
+}
+
+.columna-beneficio {
+    flex: 1;
+    transition: flex 0.5s ease;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blanco);
+}
+
+.columna-beneficio::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    transition: background 0.3s ease;
+}
+
+.columna-beneficio.activa::before {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.columna-beneficio.activa {
+    flex: 3;
+}
+
+.contenido-beneficio {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    padding: 20px;
+}
+
+.contenido-beneficio h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.info-extra {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    font-size: 0.95rem;
+}
+
+.columna-beneficio.activa .info-extra {
+    opacity: 1;
+}
