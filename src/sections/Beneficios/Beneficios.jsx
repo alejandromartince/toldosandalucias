@@ -1,27 +1,29 @@
-// Importamos los estilos
-import './Beneficios.css'
 import { useState } from 'react'
 
-const datos = [
-  {
-    titulo: 'Neocolonial',
-    info: 'Estilo tradicional con detalles clásicos y patios interiores.',
-    imagen: '/assets/SliderInterseccion/Slider-1.jpg',
-  },
-  {
-    titulo: 'Racionalista',
-    info: 'Líneas rectas, minimalismo y funcionalidad moderna.',
-    imagen: '/assets/SliderInterseccion/Slider-2.jpg',
-  },
-  {
-    titulo: 'Contemporánea',
-    info: 'Diseño moderno, materiales innovadores y espacios abiertos.',
-    imagen: '/assets/SliderInterseccion/Slider-5.jpg',
-  },
-]
+// Importamos la información
+import {
+  tituloBeneficio,
+  subtituloBeneficio,
+  textoBeneficio,
+} from '../../constants/infoBeneficios'
+
+//Importamos el contexto del idioma
+import { useIdioma } from '../../Contexts/IdiomaContext'
+
+// Importamos los estilos
+import './Beneficios.css'
 
 const Beneficios = () => {
   const [activa, setActiva] = useState(null)
+
+  // Idioma actual (puedes cambiar esto dinámicamente si tienes un sistema de idiomas)
+  const idioma = useIdioma().idioma
+
+  // Convertimos el objeto en array para mapearlo fácilmente
+  const datos = Object.values(textoBeneficio[idioma])
+  const titulosImagenes = Object.values(textoBeneficio[idioma]).map(
+    (item) => item.titulo
+  )
 
   const manejarClick = (index) => {
     setActiva(index === activa ? null : index)
@@ -30,25 +32,35 @@ const Beneficios = () => {
   return (
     <section className='beneficios' id='beneficios'>
       <div className='encabezado'>
-        <h2>BENEFICIOS</h2>
-        <p>Descubre las ventajas de trabajar con nosotros: diseño, calidad y atención personalizada.</p>
+        <h1>{tituloBeneficio[idioma]}</h1>
+        <p>{subtituloBeneficio[idioma]}</p>
       </div>
-      <div className='contenedor-beneficios'>
-        {datos.map((columna, index) => (
-          <div
-            key={index}
-            className={`columna-beneficio ${activa === index ? 'activa' : ''}`}
-            onClick={() => manejarClick(index)}
-            style={{
-              backgroundImage: `url(${columna.imagen})`,
-            }}
-          >
-            <div className='contenido-beneficio'>
-              <h3>{columna.titulo}</h3>
-              <div className='info-extra'>{columna.info}</div>
+
+      <div className='contenido-cartas'>
+        <div className='titulos-imagenes'>
+          {titulosImagenes.map((titulo, index) => (
+            <h3 key={index} className='titulo-superior'>
+              {titulo}
+            </h3>
+          ))}
+        </div>
+
+        <div className='contenedor-beneficios'>
+          {datos.map((columna, index) => (
+            <div
+              key={index}
+              className={`columna-beneficio ${activa === index ? 'activa' : ''}`}
+              onClick={() => manejarClick(index)}
+              style={{
+                backgroundImage: `url(${columna.imagen})`,
+              }}
+            >
+              <div className='contenido-beneficio'>
+                <div className='info-extra'>{columna.informacion}</div>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   )

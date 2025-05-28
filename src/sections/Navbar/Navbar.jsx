@@ -42,7 +42,7 @@ const Navbar = () => {
       </div>
 
       <nav className="navbar__nav">
-        {secciones.filter(({ id }) => id !== 'historia')
+        {secciones.filter(({ id }) => id !== 'historia' && id !== 'beneficios')
           .map(({ id, texto, offset }) => (
             <Link
               key={id}

@@ -13,10 +13,13 @@ export const useScrollEffect = (secciones, setActiveSection) => {
           const top = section.offsetTop;
           const bottom = top + section.offsetHeight;
 
+          // Ajustamos la lógica para manejar las secciones especiales
+          // 'historia' y 'beneficios' para que se comporten como 'home' y 'products'
           if (scrollPosition >= top && scrollPosition < bottom) {
-            // Si estás en "historia", también se considera como "home"
             if (id === 'historia') {
               setActiveSection('home');
+            } else if (id === 'beneficios') {
+              setActiveSection('products');
             } else {
               setActiveSection(id);
             }
