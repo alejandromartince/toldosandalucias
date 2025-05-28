@@ -91,7 +91,8 @@ TITULOS DE LAS IMAGENES
 =============================== */
 .titulos-imagenes{
     display: flex;
-    width: 100%;
+    margin: 0 auto;
+    width: 90%;
     justify-content: space-around;
     margin-bottom: 1rem;
 }
