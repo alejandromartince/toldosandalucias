@@ -3,7 +3,7 @@ import { informacionBoton } from "../../constants/infoBotones"; // Asegúrate de
 
 import "./BotonImportante.css";
 
-const BotonImportante = ({ idioma, className, id }) => {
+const BotonImportante = ({ idioma,  id }) => {
   const boton = informacionBoton(idioma, id);
 
   return (

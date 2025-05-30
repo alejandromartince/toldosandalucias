@@ -1,6 +1,10 @@
 .historia {
   height: 65vh;
   padding: 4rem 0;
+  background-image: url(/assets/Fondo/fondo_historia.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .historia-container {
@@ -22,7 +26,6 @@
   opacity: 0.9;
   text-align: justify;
   font-weight: 300;
-  font-family: "Open Sans", sans-serif;
   line-height: 1.8;
   width: 100%;
   text-shadow: 1px 1px 5px rgb(0, 0, 0);

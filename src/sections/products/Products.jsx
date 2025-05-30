@@ -9,6 +9,7 @@ import { Productos } from "../../constants/infoProductos"; // Aquí importamos a
 // Importamos los componentes
 import ToldosProductos from "../../EscenasObjetos/ToldosProductos";
 import BotonImportante from "../../components/Botones/BotonImportante";
+import BotonProductos from "../../components/Botones/BotonProductos";
 
 //Importamos los iconos
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
@@ -84,7 +85,8 @@ const Products = () => {
       </div>
 
       <div className="boton-container-productos">
-        <BotonImportante idioma={idioma} id="Productos"></BotonImportante>
+        {/* <BotonImportante idioma={idioma} id="Productos"></BotonImportante> */}
+        <BotonProductos ></BotonProductos>
       </div>
     </section>
   );
