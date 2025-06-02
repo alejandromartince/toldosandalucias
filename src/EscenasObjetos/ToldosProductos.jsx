@@ -8,6 +8,7 @@ import CanvasLoader from "../components/Objetos 3D/CanvasLoader";
 const ToldosProductos = ({ producto }) => {
   return (
     <div className="model-proyecto-container">
+
       <Canvas className="model-productos" shadows>
         <PerspectiveCamera makeDefault position={[0, 0, 5]} fov={75} />
         <ambientLight intensity={1} />

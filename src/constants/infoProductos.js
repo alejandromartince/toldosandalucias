@@ -31,6 +31,7 @@ export const Productos = [
     },
     position: [0, -5, 0],
     escala: 9,
+    copy: "SKYSHADES™ - SkyLine - Night view (https://skfb.ly/putHY) by ko_renders is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).",
   },
   {
     producto: Veranda,
@@ -43,7 +44,8 @@ export const Productos = [
       en: "Veranda awnings are the perfect solution for covering glass roofs and attic spaces, providing efficient sun protection and significantly reducing heat buildup inside. This type of awning allows you to enjoy natural light without sacrificing thermal comfort, enhancing both energy efficiency and the overall comfort of your home or covered area.",
     },
     position: [-2, -1.2, 0.9],
-    escala: .8
+    escala: .8,
+    copy: "Veranda (https://skfb.ly/ooKO7) by omerfurkanerasmus is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/)."
   },
   {
     producto: Capota,
@@ -57,6 +59,7 @@ export const Productos = [
     },
     position: [0, -5, 0],
     escala: 2.5,
+    copy: "Awning (https://skfb.ly/67RCA) by Mirandanimator is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).",
   },
   {
     producto: Pergola,
@@ -70,6 +73,7 @@ export const Productos = [
     },
     position: [0, -1.3, 0],
     escala: .7,
+    copy: "SKYSHADES™ - Sky X - Night view (https://skfb.ly/putHR) by ko_renders is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/)."
   },
   // Agregamos mas productos aquí si es necesario
 ];

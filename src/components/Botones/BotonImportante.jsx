@@ -1,4 +1,3 @@
-import React from "react";
 import { informacionBoton } from "../../constants/infoBotones"; // Asegúrate de importar la función
 
 import "./BotonImportante.css";

@@ -8,8 +8,8 @@ import { Productos } from "../../constants/infoProductos"; // Aquí importamos a
 
 // Importamos los componentes
 import ToldosProductos from "../../EscenasObjetos/ToldosProductos";
-import BotonImportante from "../../components/Botones/BotonImportante";
-import BotonProductos from "../../components/Botones/BotonProductos";
+import BotonProductos from "../../components/Botones/BotonProductos"
+import BotonInterrogacion from "../../components/Botones/BotonInterrogacion";
 
 //Importamos los iconos
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
@@ -78,15 +78,17 @@ const Products = () => {
           <h1>{tituloProducto[idioma]}</h1>
           <br />
           <hr className="hr-productos" />
-          <h3>{producto.titulo[idioma]}</h3>
+          <div className="titulo-interrogacion">
+            <h3>{producto.titulo[idioma]}</h3>
+            <BotonInterrogacion className="boton-interrogacion" mensaje={producto.copy} />
+          </div>
           <p>{producto.descripcion[idioma]}</p>
 
         </div>
       </div>
 
       <div className="boton-container-productos">
-        {/* <BotonImportante idioma={idioma} id="Productos"></BotonImportante> */}
-        <BotonProductos ></BotonProductos>
+        <BotonProductos />
       </div>
     </section>
   );

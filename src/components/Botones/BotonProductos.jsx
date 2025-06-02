@@ -14,7 +14,7 @@ const BotonProductos = () => {
   const titulo = informacionBoton(idioma, "Productos");
 
   return (
-    <button>&gt;&gt;&nbsp;
+    <button className="boton-producto">&gt;&gt;&nbsp;
       {titulo?.texto}
       
     </button>
