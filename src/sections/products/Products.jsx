@@ -8,7 +8,7 @@ import { Productos } from "../../constants/infoProductos"; // Aquí importamos a
 
 // Importamos los componentes
 import ToldosProductos from "../../EscenasObjetos/ToldosProductos";
-import BotonProductos from "../../components/Botones/BotonProductos"
+import BotonProductos from "../../components/Botones/BotonProductos";
 import BotonInterrogacion from "../../components/Botones/BotonInterrogacion";
 
 //Importamos los iconos
@@ -63,12 +63,20 @@ const Products = () => {
               <IoIosArrowBack
                 size={30}
                 onClick={prevProduct}
-                style={{ cursor: "pointer" }}
+                className="icono-productos"
+                style={{
+                  cursor: "pointer",
+                  color: "var(--blanco-texto-navbar)",
+                }}
               />
               <IoIosArrowForward
                 size={30}
                 onClick={nextProduct}
-                style={{ cursor: "pointer" }}
+                className="icono-productos"
+                style={{
+                  cursor: "pointer",
+                  color: "var(--blanco-texto-navbar)",
+                }}
               />
             </div>
           </div>
@@ -76,14 +84,15 @@ const Products = () => {
 
         <div className="right-container">
           <h1>{tituloProducto[idioma]}</h1>
-          <br />
           <hr className="hr-productos" />
           <div className="titulo-interrogacion">
             <h3>{producto.titulo[idioma]}</h3>
-            <BotonInterrogacion className="boton-interrogacion" mensaje={producto.copy} />
           </div>
           <p>{producto.descripcion[idioma]}</p>
-
+        <BotonInterrogacion
+          className="boton-interrogacion"
+          mensaje={producto.copy}
+        />
         </div>
       </div>
 

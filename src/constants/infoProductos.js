@@ -1,5 +1,4 @@
 // infoProductos.js
-import Terraza from "../objects/Toldos/Terraza";
 import Veranda from "../objects/Toldos/Veranda";
 import Capota from "../objects/Toldos/Capota";
 import Cofre from "../objects/Toldos/Cofre";
@@ -75,5 +74,11 @@ export const Productos = [
     escala: .7,
     copy: "SKYSHADES™ - Sky X - Night view (https://skfb.ly/putHR) by ko_renders is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/)."
   },
-  // Agregamos mas productos aquí si es necesario
+  // {
+  //   producto: Quitavientos,
+  //   titulo:{
+  //     es: "Quitavientos",
+  //     en: "Windbreak Awning"
+  //   },
+  // },
 ];

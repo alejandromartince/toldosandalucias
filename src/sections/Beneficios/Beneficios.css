@@ -3,8 +3,7 @@ OPCIONES GENERALES DE LA SECCIÓN
 =============================== */
 .beneficios {
     width: 100%;
-    height: 120vh;
-    /* background-image: url(/assets/Fondo/fondo_resto.png); */
+    height: 130vh;
     background-color: aliceblue;
     display: flex;
     justify-content: space-around;
@@ -22,11 +21,12 @@ ENCABEZADO DE LA SECCIÓN
     pointer-events: none;
 }
 
-.encabezado h2 {
+.encabezado h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
     letter-spacing: 2px;
-    color: var(--blanco);
+    color: var(--negro-claro);
+    text-shadow: none;
 }
 
 .encabezado p {

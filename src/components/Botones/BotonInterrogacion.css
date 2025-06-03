@@ -1,6 +1,10 @@
 .tooltip-container {
     position: relative;
     display: inline-block;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto;
+    width: 80%;
 }
 
 .boton-interrogacion {
