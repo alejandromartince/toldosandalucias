@@ -55,6 +55,7 @@ const Products = () => {
               <producto.producto
                 scale={producto.escala}
                 position={producto.position}
+                rotation={producto.rotation ? producto.rotation : [0,0,0]}
               />
             }
           />

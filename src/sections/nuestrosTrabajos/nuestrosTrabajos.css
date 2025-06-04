@@ -20,6 +20,7 @@ ESTILOS PARA EL CARRUSEL DE TRABAJOS
   display: flex;
   justify-content: center;
   align-items: end;
+  cursor: pointer;
 }
 
 .carrusel-trabajos {
@@ -37,6 +38,7 @@ ESTILOS PARA EL CARRUSEL DE TRABAJOS
   width: 100%;
   height: 100%;
   overflow: hidden;
+
 }
 
 /* Título de la imagen (encima de la imagen) */
@@ -62,7 +64,7 @@ ESTILOS PARA EL CARRUSEL DE TRABAJOS
 }
 
 .watermark-text {
-  writing-mode:vertical-lr;
+  writing-mode: vertical-lr;
   font-size: 1rem;
   font-weight: bold;
   color: rgb(160, 160, 160);
@@ -78,6 +80,7 @@ ESTILOS PARA EL CARRUSEL DE TRABAJOS
   height: 100%;
   object-fit: cover;
   transition: all 0.3s ease;
+
 }
 
 /* Capa negra (aparece encima de la imagen) */
@@ -99,7 +102,8 @@ ESTILOS PARA EL CARRUSEL DE TRABAJOS
 
 /* Efecto de hover para la imagen */
 .swiper-slide:hover .slide-image {
-  transform: scale(1.05); /* Un pequeño zoom para la imagen */
+  transform: scale(1.05);
+  /* Un pequeño zoom para la imagen */
 }
 
 /* FLECHAS DE NAVEGACION */

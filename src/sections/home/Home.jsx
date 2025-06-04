@@ -20,7 +20,6 @@ const Home = () => {
   return (
     <section className="home" id="home">
       <div className="home-container">
-
         {tipoDispositivo == "movil" && (
           <div className="home-right-container-mobile">
             <img src="/assets/Logo/Logo.png" alt="logo-movil" />

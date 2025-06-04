@@ -4,13 +4,21 @@ export const infoNuestrosTrabajos = {
   },
   en: { titulo: "Our works" },
 };
-// src/constants/imagesNuestrosTrabajos.js
+
+//Toldo Articulado, Capotas, Pergolas, Cofre, Terraza, Veranda, Quitavientos, Cortinas
 export const imagesNuestrosTrabajos = [
   {
-    imagen: "/assets/SliderTrabajos/Cortina-1.jpeg",
+    imagen: "/assets/SliderTrabajos/Articulado-1.jpg",
     titulo: {
-      es: "Cortina",
-      en: "Curtain",
+      es: "Toldo Articulado",
+      en: "Articulated Awning",
+    },
+  },
+  {
+    imagen: "/assets/SliderTrabajos/Articulado-1.jpg",
+    titulo: {
+      es: "Capota",
+      en: "Hoods",
     },
   },
   {
@@ -21,10 +29,24 @@ export const imagesNuestrosTrabajos = [
     },
   },
   {
+    imagen: "/assets/SliderTrabajos/Pergola-1.jpg",
+    titulo: {
+      es: "Pérgola",
+      en: "Pergola",
+    },
+  },
+  {
+    imagen: "/assets/SliderTrabajos/Cortina-1.jpeg",
+    titulo: {
+      es: "Stores",
+      en: "Stores",
+    },
+  },
+  {
     imagen: "/assets/SliderTrabajos/Cortina-2.jpeg",
     titulo: {
-      es: "Cortina",
-      en: "Curtain",
+      es: "Cortina de Interior",
+      en: "Indoor Curtain",
     },
   },
   {

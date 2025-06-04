@@ -29,6 +29,7 @@ const CarruselTrabajos = () => {
         direction="horizontal"
         slidesPerView={4}
         slidesPerGroup={1}
+        simulateTouch={false}
         className="carrusel-trabajos"
       >
         {trabajos.map((trabajo, index) => (

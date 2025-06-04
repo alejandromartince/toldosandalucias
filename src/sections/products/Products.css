@@ -95,6 +95,7 @@ ESTILOS RIGHT SECTION
 .right-container p {
   text-align: justify;
   font-weight: lighter;
+  text-wrap: balance; /* PARA NO DEJAR PALABRAS SUELTAS */
 }
 
 .titulo-interrogacion{
