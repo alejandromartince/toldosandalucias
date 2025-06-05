@@ -20,7 +20,7 @@ export const textoBeneficios = {
       es: "Tomamos medidas precisas del espacio donde se instalará el toldo, asegurando un ajuste perfecto y una instalación sin inconvenientes.",
       en: "We design and install custom awnings, both manual and automated, integrating smart home solutions. Additionally, we offer signage services for all types of awnings."
     },
-    imagen: "/assets/SliderTrabajos/Fabrica/Fabrica-1.jpg",
+    imagen: "/assets/SliderTrabajos/Fabrica/Fabrica-2.jpg",
   },
   fabricacion: {
     titulo: {

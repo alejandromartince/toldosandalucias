@@ -28,13 +28,17 @@ export const informacionBoton = (idioma, id) => {
     {
       id: "Beneficios", // Nuevo botón agregado
       texto: {
-        es: "Mira nuestros trabajos", // Texto en español
-        en: "See our works", // Texto en inglés
+        es: "MÁS INFORMACIÓN", // Texto en español
+        en: "MORE INFORMATION", // Texto en inglés
       },
-      url: "works", // URL de la nueva sección
+      subtexto: {
+        es: "SIN COMPROMISO",
+        en: "NO STRING ATTACHED"
+      },
+      url: "https://web.whatsapp.com/send?phone=34679847618&text=", // URL de la nueva sección
     },
-    
-    
+
+
   ];
   // Encuentra el botón con el ID dado
   const boton = botones.find((boton) => boton.id === id);
@@ -42,10 +46,10 @@ export const informacionBoton = (idioma, id) => {
   // Si el botón existe, devuelve el texto en el idioma seleccionado
   return boton
     ? {
-        id: boton.id,
-        texto: boton.texto[idioma] || boton.texto.es,
-        url: boton.url,
-        offset: boton.offset || 0,
-      }
+      id: boton.id,
+      texto: boton.texto[idioma] || boton.texto.es,
+      url: boton.url,
+      offset: boton.offset || 0,
+    }
     : null;
 };

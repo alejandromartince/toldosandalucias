@@ -1,9 +1,6 @@
 //Importamos los hooks de react
 import { useState } from 'react';
 
-//Importamos los componentes
-import BotonLinea from "../../components/Botones/BotonLinea"
-
 //Importamos el contexto del idioma
 import { useIdioma } from '../../contexts/IdiomaContext';
 
@@ -27,7 +24,6 @@ const Galeria = () => {
         setActivo(prev => prev === index ? null : index);
     };
 
-    console.log(activo)
 
     return (
         <div className="galeria-contenedor">
@@ -55,6 +51,7 @@ const Galeria = () => {
                             {esActivo && (
                                 <div className="info-carta" onClick={(e) => e.stopPropagation()}>
                                     <p>{item.informacion}</p>
+                                    
                                 </div>
                             )}
                         </div>
