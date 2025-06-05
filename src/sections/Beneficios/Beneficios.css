@@ -2,7 +2,7 @@
 OPCIONES GENERALES
 ============================ */
 .beneficios {
-    height: 125vh;
+    height: 120vh;
     background-color: aliceblue;
     color: var(--negro-claro);
 }
@@ -14,7 +14,7 @@ ENCABEZADO
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 5rem;
+    padding-top: 4rem;
 }
 
 .encabezado-beneficios h1 {
@@ -24,7 +24,7 @@ ENCABEZADO
 .encabezado-beneficios p {
     text-shadow: none;
     text-align: center;
-    padding-top: 2rem;
+    padding-top: 1rem;
     max-width: 60%;
 }
 
@@ -32,7 +32,7 @@ ENCABEZADO
 GALERIA DE FOTOS
 ============================ */
 .galeria-contenedor {
-    width: 90%;
+    width: 99%;
     margin: auto;
 }
 
@@ -42,15 +42,17 @@ TITULOS GALERIA
 .titulos-container {
     display: flex;
     justify-content: space-around;
-    padding-top: 4rem;
-    margin-bottom: 1rem;
+    padding-top: 6rem;
+    padding-bottom: 2rem;
 }
 
 .titulo {
     cursor: pointer;
-    font-size: 1.3rem;
     transition: color 0.3s ease;
+    font-size: 1.5rem;
+    font-family:sans-serif;
 }
+
 
 .titulo.invisible {
     color: var(--gris-invisible);
@@ -63,7 +65,7 @@ TITULOS GALERIA
 /* ============================
 IMAGENES
 ============================ */
-.imagenes {
+.imagenes-container {
     display: flex;
     gap: 1rem;
     height: 45rem;
@@ -76,6 +78,7 @@ IMAGENES
     transition: all 0.5s ease;
     opacity: 1;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .imagen-item.oculto {
@@ -94,14 +97,27 @@ IMAGENES
     flex: 5;
 }
 
+/* ============================
+INFORMACION CARTAS
+============================ */
 .info-carta {
     position: absolute;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 1rem;
+    right: 5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid rgb(0, 0, 0);
+    background-color: aliceblue;
+    padding: 2rem;
     font-size: 0.95rem;
-    color: #000;
-    width: 100%;
+    height: 50%;
+    width: 20%;
     box-sizing: border-box;
-    border-top: 2px solid #ccc;
+    cursor:auto;
+}
+
+.info-carta p {
+    text-shadow: none;
+    color: black;
+    text-wrap: balance;
+    line-height: 1.5;
 }

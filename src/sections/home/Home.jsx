@@ -8,7 +8,7 @@ import BotonLinea from "../../components/Botones/BotonLinea";
 import useTipoDispositivo from "../../Hooks/useTipoDispositivo";
 
 //Importamos el contexto del idioma
-import { useIdioma } from "../../Contexts/IdiomaContext";
+import { useIdioma } from "../../contexts/IdiomaContext";
 
 // Estilos
 import "./Home.css";

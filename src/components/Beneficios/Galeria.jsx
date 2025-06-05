@@ -1,6 +1,9 @@
 //Importamos los hooks de react
 import { useState } from 'react';
 
+//Importamos los componentes
+import BotonLinea from "../../components/Botones/BotonLinea"
+
 //Importamos el contexto del idioma
 import { useIdioma } from '../../contexts/IdiomaContext';
 
@@ -37,7 +40,7 @@ const Galeria = () => {
                 ))}
             </div>
 
-            <div className="imagenes">
+            <div className="imagenes-container">
                 {datos.map((item, index) => {
                     const esActivo = activo === index;
                     const mostrar = activo === null || esActivo;
@@ -50,7 +53,7 @@ const Galeria = () => {
                         >
                             <img src={item.imagen} alt={item.titulo} />
                             {esActivo && (
-                                <div className="info-carta">
+                                <div className="info-carta" onClick={(e) => e.stopPropagation()}>
                                     <p>{item.informacion}</p>
                                 </div>
                             )}
