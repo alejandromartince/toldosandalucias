@@ -13,17 +13,17 @@ export const textoBeneficio = {
     diseno: {
       titulo: "MEDICIÓN Y DISEÑO",
       informacion: "Tomamos medidas precisas del espacio donde se instalará el toldo, asegurando un ajuste perfecto y una instalación sin inconvenientes.",
-      imagen: "/assets/SliderInterseccion/Slider-1.jpg",
+      imagen: "/assets/SliderTrabajos/Slider-1.jpg",
     },
     fabricacion: {
       titulo: "FABRICACIÓN",
       informacion: "Nuestro equipo altamente cualificado instala el toldo asegurando su correcta fijación y funcionalidad, garantizando un trabajo profesional adaptado a cada proyecto.",
-      imagen: "/assets/SliderInterseccion/Slider-2.jpg",
+      imagen: "/assets/SliderTrabajos/Fabrica/Fabrica-1.jpg",
     },
     instalacion: {
       titulo: "INSTALACIÓN",
       informacion: "Nuestro equipo altamente cualificado instala el toldo asegurando su correcta fijación y funcionalidad, garantizando un trabajo profesional adaptado a cada proyecto.",
-      imagen: "/assets/SliderInterseccion/Slider-5.jpg",
+      imagen: "/assets/SliderTrabajos/Pergolas/Pergola-2.jpg",
     },
   },
 

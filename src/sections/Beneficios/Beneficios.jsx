@@ -39,9 +39,13 @@ const Beneficios = () => {
       <div className='contenido-cartas'>
         <div className='titulos-imagenes'>
           {titulosImagenes.map((titulo, index) => (
-            <h3 key={index} className='titulo-superior'>
+            <h3
+              key={index}
+              className={activa === index ? 'titulo-superior' : 'titulo-superior-invisible'}
+            >
               {titulo}
             </h3>
+
           ))}
         </div>
 

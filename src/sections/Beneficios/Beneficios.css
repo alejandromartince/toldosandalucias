@@ -3,7 +3,7 @@ OPCIONES GENERALES DE LA SECCIÓN
 =============================== */
 .beneficios {
     width: 100%;
-    height: 120vh;
+    height: 125vh;
     background-color: aliceblue;
     display: flex;
     justify-content: space-between;
@@ -24,8 +24,8 @@ ENCABEZADO DE LA SECCIÓN
 
 .encabezado h1 {
     text-shadow: none;
-    padding-top: 4rem;
-    font-size: 2rem;
+    padding-top: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
     letter-spacing: 2px;
     color: var(--negro-claro);
@@ -34,8 +34,15 @@ ENCABEZADO DE LA SECCIÓN
 .encabezado p {
     font-size: 1rem;
     margin: 0 auto;
-    max-width: 50%;
+    max-width: 70%;
     text-shadow: none;
+}
+
+/* ============================
+CONTENIDO CARTAS (PARTE DE ABAJO)
+============================ */
+.contenido-cartas{
+    padding-bottom: 1rem;
 }
 
 /* ===============================
@@ -43,10 +50,10 @@ CONTENEDOR DE BENEFICIOS
 =============================== */
 .contenedor-beneficios {
     display: flex;
-    height: 42rem;
+    height: 50rem;
     gap: 1rem;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1rem;
     overflow: hidden;
     z-index: 1;
 }
@@ -54,8 +61,6 @@ CONTENEDOR DE BENEFICIOS
 /* ===============================
 COLUMNAS DE BENEFICIOS
 =============================== */
-
-
 .columna-beneficio {
     flex: 1;
     transition: flex 0.5s ease;
@@ -86,17 +91,18 @@ COLUMNAS DE BENEFICIOS
 .columna-beneficio.activa {
     flex: 5;
 }
-
-
 /* ===============================
 TITULOS DE LAS IMAGENES
 =============================== */
 .titulos-imagenes {
     display: flex;
-    margin: 0 auto;
-    width: 90%;
+    width: 100%;
     justify-content: space-around;
-    margin-bottom: 1rem;
+}
+
+.titulo-superior, .titulo-superior-invisible{
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 /* ===============================
@@ -111,17 +117,6 @@ CONTENIDO INTERNO DE CADA COLUMNA
     justify-content: center;
     height: 100%;
 }
-
-/* ===============================
-TÍTULO
-=============================== */
-.contenido-beneficio h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    min-height: 40px;
-    /* altura fija para evitar que se mueva */
-}
-
 /* ===============================
 INFO EXTRA VISIBLE AL ACTIVAR
 =============================== */
@@ -132,13 +127,8 @@ INFO EXTRA VISIBLE AL ACTIVAR
     max-width: 90%;
     margin: 0 auto;
     min-height: 60px;
-    /* altura mínima para evitar cambios de tamaño */
 }
 
 .columna-beneficio.activa .info-extra {
     opacity: 1;
 }
-
-/* =====================================
-MEDIA QUERIES
-===================================*/

@@ -1,4 +1,5 @@
-import React from "react";
+//Importamos los componentes
+import Mapa from "../../components/Contacto/Mapa";
 
 //Importamos los iconos
 import { FaPhone } from "react-icons/fa6";
@@ -8,7 +9,7 @@ import { MdEmail } from "react-icons/md";
 import { infoContacto } from "../../constants/infoContacto";
 
 //Importamos los contextos
-import { useIdioma } from "../../contexts/IdiomaContext";
+import { useIdioma } from "../../Contexts/IdiomaContext";
 
 //Importamos los estilos
 import "./Contacto.css";
@@ -45,20 +46,7 @@ const Contacto = () => {
                 <p>info@toldosandalucia.com</p>
               </div>
               <br />
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.846610736203!2d-4.533394423589894!3d36.606003172303176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72fc8339c50cdf%3A0x2087123485cb7647!2sC.%20Santo%20Tomas%2C%2019%2C%2029631%20Arroyo%20de%20La%20Miel%2C%20M%C3%A1laga!5e0!3m2!1ses!2ses!4v1741848413800!5m2!1ses!2ses"
-                width="100%"
-                height="250px"
-                style={{
-                  border: "4px solid var(--negro-muy-claro)",
-                  boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.58)", // Sombra sutil
-                  maxWidth: "400px", // Máximo ancho del mapa
-                  display: "block", // Asegurar centrado
-                }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+              <Mapa />
               <br />
               <br />
             </div>

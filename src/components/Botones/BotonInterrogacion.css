@@ -3,7 +3,7 @@
     height: 32px;
     border-radius: 50%;
     border: none;
-    background-color: #c7c7c7;
+    background-color: #c7c7c734;
     color: #333;
     font-weight: bold;
     font-size: 18px;
@@ -12,7 +12,7 @@
 }
 
 .boton-interrogacion:hover {
-    background-color: #ffffff;
+    background-color: #ffffffa1;
 }
 
 .tooltip-mensaje {
