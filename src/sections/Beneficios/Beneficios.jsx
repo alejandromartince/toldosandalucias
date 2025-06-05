@@ -20,10 +20,10 @@ const Beneficios = () => {
   const { idioma } = useIdioma();
 
   // Convertimos el objeto en array para mapearlo fácilmente
-  const datos = Object.values(textoBeneficio[idioma])
-  const titulosImagenes = Object.values(textoBeneficio[idioma]).map(
-    (item) => item.titulo
-  )
+  const datos = Object.values(textoBeneficio); // accede a diseno, fabricacion, instalacion
+
+const titulosImagenes = datos.map(item => item.titulo);
+
 
   const manejarClick = (index) => {
     setActiva(index === activa ? null : index)
@@ -41,9 +41,9 @@ const Beneficios = () => {
           {titulosImagenes.map((titulo, index) => (
             <h3
               key={index}
-              className={activa === index ? 'titulo-superior' : 'titulo-superior-invisible'}
+              className='titulo-superior'
             >
-              {titulo}
+              {titulo[idioma]}
             </h3>
 
           ))}
@@ -58,9 +58,9 @@ const Beneficios = () => {
               style={{
                 backgroundImage: `url(${columna.imagen})`,
               }}
-            >
+            ><p>hola</p>
               <div className='contenido-beneficio'>
-                <div className='info-extra'>{columna.informacion}</div>
+                <div className='info-extra'>{columna.informacion[idioma]}</div>
               </div>
             </div>
           ))}
