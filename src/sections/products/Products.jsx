@@ -55,7 +55,7 @@ const Products = () => {
               <producto.producto
                 scale={producto.escala}
                 position={producto.position}
-                rotation={producto.rotation ? producto.rotation : [0,0,0]}
+                rotation={producto.rotation ? producto.rotation : [0, 0, 0]}
               />
             }
           />
@@ -90,16 +90,19 @@ const Products = () => {
             <h3>{producto.titulo[idioma]}</h3>
           </div>
           <p>{producto.descripcion[idioma]}</p>
-        <BotonInterrogacion
-          className="boton-interrogacion"
-          mensaje={producto.copy}
-        />
         </div>
       </div>
 
       <div className="boton-container-productos">
-        <BotonProductos />
-      </div>
+  <div className="boton-centro">
+    <BotonProductos />
+  </div>
+  <div className="boton-derecha">
+    <BotonInterrogacion mensaje={producto.copy} />
+  </div>
+</div>
+
+
     </section>
   );
 };

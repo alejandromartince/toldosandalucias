@@ -40,10 +40,12 @@
 
 
 .product-navigation-container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+  z-index: 1;
 }
 
 .product-navigation {
@@ -111,8 +113,22 @@ ESTILOS RIGHT SECTION
    ESTILOS BOTONES
 ============================================== */
 .boton-container-productos {
+  position: relative;
   height: 35%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Centrar absolutamente el botón principal */
+.boton-centro {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Posicionar el interrogante al borde derecho del right-container */
+.boton-derecha {
+  position: absolute;
+  right: 6%;
 }

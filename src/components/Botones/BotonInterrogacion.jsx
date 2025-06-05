@@ -3,8 +3,10 @@ import "./BotonInterrogacion.css";
 const BotonInterrogacion = ({ mensaje }) => {
   return (
     <div className="tooltip-container">
-      <button className="boton-interrogacion">?</button>
-      <div className="tooltip-mensaje">{mensaje}</div>
+      <button className="boton-interrogacion">
+        ?
+        <span className="tooltip-mensaje">{mensaje}</span>
+      </button>
     </div>
   );
 };

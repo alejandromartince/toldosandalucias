@@ -17,7 +17,7 @@ const Beneficios = () => {
   const [activa, setActiva] = useState(null)
 
   // Idioma actual (puedes cambiar esto dinámicamente si tienes un sistema de idiomas)
-  const idioma = useIdioma().idioma
+  const { idioma } = useIdioma();
 
   // Convertimos el objeto en array para mapearlo fácilmente
   const datos = Object.values(textoBeneficio[idioma])

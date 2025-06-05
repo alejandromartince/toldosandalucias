@@ -59,7 +59,7 @@ OPCIONES DE LA BARRA DE PROGRESO
   position: fixed;
   top: 4rem;
   left: 0;
-  height: 4px;
+  height: 6px;
   background-color: var(--blanco); /* o el color que prefieras */
   z-index: 20;
   transition: width 0.2s ease-out;

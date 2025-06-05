@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 // Importamos las paginas
-import RutaPrincipal from "./paginas/Rutas/Principal/RutaPrincipal";
-import RutaPersonalizarToldos from "./paginas/Rutas/PersonalizarToldos/RutaPersonalizarToldos";
+import RutaPrincipal from "./paginas/Principal/RutaPrincipal";
+import RutaPersonalizarToldos from "./paginas/PersonalizarToldos/RutaPersonalizarToldos";
 
 // Contexto
 import { IdiomaProvider } from "./Contexts/IdiomaContext";

@@ -1,6 +1,6 @@
 //Importamos las secciones principales
-import Footer from "../../../sections/Footer/Footer";
-import PersonalizarToldos from "../../../sections/PersonalizarToldos/PersonalizarToldos";
+import Footer from "../../sections/footer/Footer"
+import PersonalizarToldos from "../../sections/PersonalizarToldos/PersonalizarToldos"
 
 //Importamos los estilos
 import './RutaPersonalizarToldos.css' 

@@ -3,12 +3,13 @@ OPCIONES GENERALES DE LA SECCIÓN
 =============================== */
 .beneficios {
     width: 100%;
-    height: 130vh;
+    height: 120vh;
     background-color: aliceblue;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: column;
     position: relative;
+    color: var(--negro-claro);
 }
 
 /* ===============================
@@ -22,18 +23,19 @@ ENCABEZADO DE LA SECCIÓN
 }
 
 .encabezado h1 {
+    text-shadow: none;
+    padding-top: 4rem;
     font-size: 2rem;
     margin-bottom: 1rem;
     letter-spacing: 2px;
     color: var(--negro-claro);
-    text-shadow: none;
 }
 
 .encabezado p {
     font-size: 1rem;
-    color: var(--blanco);
     margin: 0 auto;
     max-width: 50%;
+    text-shadow: none;
 }
 
 /* ===============================
@@ -42,10 +44,9 @@ CONTENEDOR DE BENEFICIOS
 .contenedor-beneficios {
     display: flex;
     height: 42rem;
-    max-width: 90%;
     gap: 1rem;
     margin: 0 auto;
-    margin-bottom: 2rem;
+    padding: 0 2rem;
     overflow: hidden;
     z-index: 1;
 }
@@ -90,13 +91,14 @@ COLUMNAS DE BENEFICIOS
 /* ===============================
 TITULOS DE LAS IMAGENES
 =============================== */
-.titulos-imagenes{
+.titulos-imagenes {
     display: flex;
     margin: 0 auto;
     width: 90%;
     justify-content: space-around;
     margin-bottom: 1rem;
 }
+
 /* ===============================
 CONTENIDO INTERNO DE CADA COLUMNA
 =============================== */
