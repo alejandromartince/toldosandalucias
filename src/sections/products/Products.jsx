@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // Importamos los contextos
-import { useIdioma } from "../../Contexts/IdiomaContext";
+import { useIdioma } from "../../contexts/IdiomaContext";
 
 // Importamos la informacion
 import { Productos } from "../../constants/infoProductos"; // Aquí importamos ambos correctamente
@@ -16,6 +16,7 @@ import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 // Importamos los estilos
 import "./Products.css";
+import Popup from "../PersonalizarToldos/PopUp";
 
 const Products = () => {
   const { idioma } = useIdioma();
@@ -92,17 +93,16 @@ const Products = () => {
           <p>{producto.descripcion[idioma]}</p>
         </div>
       </div>
+      <Popup />
 
       <div className="boton-container-productos">
-  <div className="boton-centro">
-    <BotonProductos />
-  </div>
-  <div className="boton-derecha">
-    <BotonInterrogacion mensaje={producto.copy} />
-  </div>
-</div>
-
-
+        <div className="boton-centro">
+          <BotonProductos />
+        </div>
+        <div className="boton-derecha">
+          <BotonInterrogacion mensaje={producto.copy} />
+        </div>
+      </div>
     </section>
   );
 };

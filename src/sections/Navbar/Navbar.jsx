@@ -10,7 +10,7 @@ import useScrollPositionY from '../../Hooks/useScrollPositionY';
 import { secciones } from '../../constants/infoNavbar';
 
 //Importamos el contexto del idioma
-import { useIdioma } from "../../Contexts/IdiomaContext";
+import { useIdioma } from '../../contexts/IdiomaContext';
 
 //Importamos los compoententes
 import SelectorIdioma from '../../components/Navbar/SelectorIdioma';

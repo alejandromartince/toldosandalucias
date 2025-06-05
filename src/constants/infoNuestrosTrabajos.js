@@ -49,17 +49,10 @@ export const imagesNuestrosTrabajos = [
     },
   },
   {
-    imagen: "/assets/SliderTrabajos/Stores/Store-1.jpeg",
+    imagen: "/assets/SliderTrabajos/Cortinas/Cortina-1.jpeg",
     titulo: {
       es: "Stores",
       en: "Stores",
-    },
-  },
-  {
-    imagen: "/assets/SliderTrabajos/Cortinas/Cortina-1.jpeg",
-    titulo: {
-      es: "Cortina de Interior",
-      en: "Indoor Curtain",
     },
   },
   {

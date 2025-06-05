@@ -1,5 +1,8 @@
+//Importamos los hooks de react
+import { Link } from "react-router-dom";
+
 // Importamos el contexto del idioma
-import { useIdioma } from "../../Contexts/IdiomaContext";
+import { useIdioma } from "../../contexts/IdiomaContext";
 
 // Importamos la información
 import { informacionBoton } from "../../constants/infoBotones";
@@ -14,12 +17,12 @@ const BotonProductos = () => {
   const titulo = informacionBoton(idioma, "Productos");
 
   return (
-    <a href="/PersonalizarToldos" target="_blank">
-    <button className="boton-producto">&gt;&gt;&nbsp;
-      {titulo?.texto}
-      
-    </button>
-    </a>
+    <Link to="/PersonalizarToldos">
+      <button className="boton-producto">
+        &gt;&gt;&nbsp;
+        {titulo?.texto}
+      </button>
+    </Link>
   );
 };
 
