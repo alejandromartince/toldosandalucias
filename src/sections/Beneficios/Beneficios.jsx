@@ -1,72 +1,27 @@
-import { useState } from 'react'
-
-// Importamos la información
-import {
-  tituloBeneficio,
-  subtituloBeneficio,
-  textoBeneficio,
-} from '../../constants/infoBeneficios'
-
 //Importamos el contexto del idioma
-import { useIdioma } from '../../Contexts/IdiomaContext'
+import { useIdioma } from "../../contexts/IdiomaContext"
 
-// Importamos los estilos
+//Importamos la informacion
+import { encabezadoBeneficios } from '../../constants/infoBeneficios'
+
+//Importamos los estilos
 import './Beneficios.css'
+import Galeria from "../../components/Beneficios/Galeria";
 
 const Beneficios = () => {
-  const [activa, setActiva] = useState(null)
 
-  // Idioma actual (puedes cambiar esto dinámicamente si tienes un sistema de idiomas)
   const { idioma } = useIdioma();
 
-  // Convertimos el objeto en array para mapearlo fácilmente
-  const datos = Object.values(textoBeneficio); // accede a diseno, fabricacion, instalacion
-
-const titulosImagenes = datos.map(item => item.titulo);
-
-
-  const manejarClick = (index) => {
-    setActiva(index === activa ? null : index)
-  }
-
   return (
-    <section className='beneficios' id='beneficios'>
-      <div className='encabezado'>
-        <h1>{tituloBeneficio[idioma]}</h1>
-        <p>{subtituloBeneficio[idioma]}</p>
+    <section className="beneficios" id="beneficios">
+      <div className='encabezado-beneficios'>
+        <h1>{encabezadoBeneficios.titulo[idioma]}</h1>
+        <p>{encabezadoBeneficios.descripcion[idioma]}</p>
       </div>
 
-      <div className='contenido-cartas'>
-        <div className='titulos-imagenes'>
-          {titulosImagenes.map((titulo, index) => (
-            <h3
-              key={index}
-              className='titulo-superior'
-            >
-              {titulo[idioma]}
-            </h3>
+      <Galeria />
 
-          ))}
-        </div>
-
-        <div className='contenedor-beneficios'>
-          {datos.map((columna, index) => (
-            <div
-              key={index}
-              className={`columna-beneficio ${activa === index ? 'activa' : ''}`}
-              onClick={() => manejarClick(index)}
-              style={{
-                backgroundImage: `url(${columna.imagen})`,
-              }}
-            ><p>hola</p>
-              <div className='contenido-beneficio'>
-                <div className='info-extra'>{columna.informacion[idioma]}</div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+    </section >
   )
 }
 

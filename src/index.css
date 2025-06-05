@@ -12,8 +12,9 @@ body,
   --negro: #131313;
   --negro-claro: #272727;
   --negro-muy-claro: #3b3b3b;
-
+  
   --gris: #808080;
+  --gris-invisible: #50505080;
 
   --blanco:#fff;
   --blanco-claro: #f1f1f1; /* Fondo gris claro */
@@ -60,10 +61,4 @@ footer a {
   font-weight: 300;
   color: white;
   text-decoration: none;
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem; /* Reducir aún más el tamaño de la fuente */
-  }
 }

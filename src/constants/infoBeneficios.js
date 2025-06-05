@@ -1,14 +1,16 @@
-export const tituloBeneficio = {
-  es: "LO QUE NOS HACE DIFERENTES",
-  en: "WHAT MAKES US DIFFERENT",
-};
+export const encabezadoBeneficios = {
+  titulo: {
+    es: "LO QUE NOS HACE DIFERENTES",
+    en: "WHAT MAKES US DIFFERENT"
+  },
 
-export const subtituloBeneficio = {
-  es: "Gracias a nuestra amplia experiencia, hemos perfeccionado nuestras herramientas y optimizado cada aspecto de nuestro trabajo, lo que nos ha permitido posicionarnos como líderes en el sector.",
-  en: "Thanks to our extensive experience, we have refined our tools and optimized every aspect of our work, allowing us to position ourselves as leaders in the industry.",
+  descripcion: {
+    es: "Gracias a nuestra amplia experiencia, hemos perfeccionado nuestras herramientas y optimizado cada aspecto de nuestro trabajo, lo que nos ha permitido posicionarnos como líderes en el sector.",
+    en: "Thanks to our extensive experience, we have refined our tools and optimized every aspect of our work, allowing us to position ourselves as leaders in the industry.",
+  }
 }
 
-export const textoBeneficio = {
+export const textoBeneficios = {
   diseno: {
     titulo: {
       es: "MEDICIÓN Y DISEÑO",
