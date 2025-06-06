@@ -15,9 +15,9 @@ import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { useIdioma } from "../../contexts/IdiomaContext";
 
 // Estilos
-import "./Products.css";
+import "./prueba.css";
 
-const Products = () => {
+const Prueba = () => {
   const { idioma } = useIdioma();
   const [currentProductIndex, setCurrentProductIndex] = useState(0); //Asignamos el valor del producto
   const [mostrarPopup, setMostrarPopup] = useState(false); // Nuevo estado para mostrar el popup
@@ -135,4 +135,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Prueba;

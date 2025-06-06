@@ -29,17 +29,6 @@ OPCIONES CONTENEDOR SUPERIOR IZQUIERDA
 ============================ */
 .contenedor-izquierda{
   height: 55vh;
-  width: 100%;
-}
-
-.model-proyecto-container{
-  height: 100%;
-  width: 100%;
-}
-
-.model-productos{
-  height: 100%;
-  width: 55%;
 }
 
 .contenedor-navegacion-productos {

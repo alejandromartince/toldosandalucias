@@ -24,6 +24,30 @@ footer {
   flex-direction: column;
   margin-top: 4rem;
 }
+
+/* ============================
+OPCIONES DE HOVER
+============================ */
+.info-politicas-opciones a, .info-ayuda-parrafos a,
+.info-politicas-opciones p {
+  transition: color .2s ease-in-out;
+  text-shadow: none;
+}
+
+.icono-footer{
+  transition: fill .2s ease-in-out;
+}
+
+.info-politicas-opciones a:hover, 
+.info-politicas-opciones p:hover, .info-ayuda-parrafos a:hover {
+  color: var(--blanco-footer);
+}
+
+.icono-footer:hover{
+  
+  fill: var(--blanco-footer);
+}
+
 /*=============================
 INFO POLITICAS
 =============================*/
@@ -45,6 +69,7 @@ INFO POLITICAS
   justify-content: space-around;
 }
 
+
 /* =============================
 INFO AYUDA
 ===============================*/
@@ -55,12 +80,12 @@ INFO AYUDA
   justify-content: space-around;
 }
 
-.info-ayuda-parrafos a{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    color: white;
-    text-decoration: none;
+.info-ayuda-parrafos a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+  text-decoration: none;
 }
 
 /*=============================
@@ -68,7 +93,8 @@ ICONO REDES
 =============================*/
 .iconos-redes {
   display: flex;
-  gap: 1.5rem; /* Espacio entre iconos */
+  gap: 1.5rem;
+  /* Espacio entre iconos */
   margin-top: 0.2rem;
 }
 
@@ -84,7 +110,8 @@ ICONO REDES
 }
 
 .icon-redondo {
-  pointer-events: none; /* Para que el icono no bloquee el clic */
+  pointer-events: none;
+  /* Para que el icono no bloquee el clic */
 }
 
 /*=============================
@@ -105,7 +132,7 @@ COPYRIGHT
   text-align: center;
 }
 
-.espaciador{
-    visibility: hidden;
-    height: 2rem;
+.espaciador {
+  visibility: hidden;
+  height: 2rem;
 }

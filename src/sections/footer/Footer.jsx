@@ -73,7 +73,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaFacebookF size={25} className="icon-redondo" color="white"  />
+              <FaFacebookF size={25} className="icono-footer" color="white"  />
             </a>
 
             <a
@@ -81,7 +81,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaTiktok size={25} className="icon-redondo" color="white" />
+              <FaTiktok size={25} className="icono-footer" color="white" />
             </a>
 
             <a
@@ -89,7 +89,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaInstagram size={25} className="icon-redondo" color="white" />
+              <FaInstagram size={25} className="icono-footer" color="white" />
             </a>
           </div>
         </div>

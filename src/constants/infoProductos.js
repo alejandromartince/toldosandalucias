@@ -4,7 +4,7 @@ import Cofre from "../components/Objetos 3D/Toldos/Cofre";
 import Pergola from "../components/Objetos 3D/Toldos/Pergola";
 import Toldo from "../components/Objetos 3D/Toldos/Toldo";
 
-export const Productos = [
+export const infoProductos = [
   {
     producto: Toldo,
     titulo: {

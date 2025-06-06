@@ -1,28 +1,21 @@
-//Importamos los hooks de react
-import { Link } from "react-router-dom";
-
-// Importamos el contexto del idioma
+//Importamos el contexto del idioma
 import { useIdioma } from "../../contexts/IdiomaContext";
 
-// Importamos la información
+//Importamos la informacion
 import { informacionBoton } from "../../constants/infoBotones";
 
-// Importamos los estilos
+//Importamos el estilo
 import "./BotonProductos.css";
 
-const BotonProductos = () => {
+const BotonProductos = ({ onAbrir }) => {
   const { idioma } = useIdioma();
-
-  // Usamos el ID "Productos" para obtener el botón correspondiente
   const titulo = informacionBoton(idioma, "Productos");
 
   return (
-    <Link to="/PersonalizarToldos">
-      <button className="boton-producto">
-        &gt;&gt;&nbsp;
-        {titulo?.texto}
-      </button>
-    </Link>
+    <button onClick={onAbrir} className="boton-producto">
+      &gt;&gt;&nbsp;
+      {titulo?.texto}
+    </button>
   );
 };
 
