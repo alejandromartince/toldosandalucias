@@ -25,6 +25,8 @@ const NavbarDefault = () => {
   useScrollEffect(secciones, setActiveSection); // Hook para manejar el scroll
   const scrollY = useScrollPositionY(); //Obtenemos el scrol vertical
 
+
+
   //Scroll para la barra de progreso
   const scrollYProgress = (() => {
     const scrollTop = window.scrollY;

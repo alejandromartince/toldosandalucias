@@ -76,7 +76,7 @@ const NavbarMobile = () => {
         </div>
 
         <div className={`menu-desplegable-navbar ${menuOpen ? 'open' : ''}`}>
-          <nav className="navbar__nav">
+          <nav className="navbar__navColumna">
             {secciones
               .filter(({ id }) => id !== 'historia' && id !== 'beneficios')
               .map(({ id, texto, offset }) => (

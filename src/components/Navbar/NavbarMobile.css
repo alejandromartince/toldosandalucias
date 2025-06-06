@@ -29,9 +29,10 @@ MENU DESPLEGABLE
   left: 0;
 }
 
-.navbar__nav{
+.navbar__navColumna{
     display: flex;
     flex-direction: column;
+    gap: 2rem;
 }
 
 /* ============================
