@@ -3,8 +3,6 @@ OPCIONES DEL SELECTOR DE IDIOMA
 =============================== */
 .selector-idioma-dropdown {
   position: relative;
-  display: inline-block;
-  margin-right: 1rem;
 }
 
 .boton-idioma-actual {

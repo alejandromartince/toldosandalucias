@@ -37,7 +37,6 @@ const NavbarDefault = () => {
     // <header className={`navbar ${scrollY > 100 ? 'navbar__scrolled' : ''}`}>
     <>
       <header className={`navbar ${scrollY > 100 ? 'navbar__scrolled' : ''}`}>
-
         <div className="navbar__logo">
           <Link to="home" spy={true} smooth={true} duration={1000}>
             <img src="/assets/Logo/Logo_Transparent.png" alt="Logo" />

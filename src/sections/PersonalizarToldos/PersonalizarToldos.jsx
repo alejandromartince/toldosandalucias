@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 
 //Importamos el contexto del idioma
-import { useIdioma } from '../../contexts/IdiomaContext';
+import { useIdioma } from '../../Contexts/IdiomaContext';
 
 //Importamos los compoenntes
 import BotonCerrarMenu from '../../components/Botones/BotonCerrarMenu';

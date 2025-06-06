@@ -1,0 +1,76 @@
+/* ============================
+OPCIONES GENERALES
+============================ */
+.menu-parteDerecha{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    padding-right: 1rem;
+}
+/* ============================
+MENU DESPLEGABLE
+============================ */
+.menu-desplegable-navbar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100vh;
+  background-color: var(--negro-claro);
+  padding: 4rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.menu-desplegable-navbar.open {
+  left: 0;
+}
+
+.navbar__nav{
+    display: flex;
+    flex-direction: column;
+}
+
+/* ============================
+BOTON HAMBURGUESA
+============================ */
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu-toggle span {
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+.menu-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ============================
+no-scroll 
+============================ */
+.no-scroll {
+  overflow: hidden;
+  touch-action: none;
+  overscroll-behavior: none;
+}
