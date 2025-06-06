@@ -44,6 +44,17 @@ header {
 /* ===============================
 OPCIONES DEL LOGO
 =============================== */
+.navbar__logo{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.navbar__logo a{
+  display: flex;
+  justify-content: center;
+}
+
 .navbar__logo img {
   width: 6.25rem;
   margin-left: 1rem;
@@ -76,9 +87,9 @@ OPCIONES DE LA BARRA DE PROGRESO
 ================================*/
 .navbar__progress-bar {
   position: fixed;
-  top: 4rem;
+  top: 3.9rem;
   left: 0;
-  height: 6px;
+  height: 3px;
   background-color: var(--blanco); /* o el color que prefieras */
   z-index: 20;
   transition: width 0.2s ease-out;

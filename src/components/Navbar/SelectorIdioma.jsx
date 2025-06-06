@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
 //Importamos el hook del idioma
-import { useIdioma } from "../../Contexts/IdiomaContext";
+import { useIdioma } from "../../contexts/IdiomaContext";
 
 //Importamos los iconos
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
