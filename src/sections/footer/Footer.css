@@ -44,7 +44,6 @@ OPCIONES DE HOVER
 }
 
 .icono-footer:hover{
-  
   fill: var(--blanco-footer);
 }
 
@@ -84,7 +83,6 @@ INFO AYUDA
   display: flex;
   align-items: center;
   gap: 1rem;
-  color: white;
   text-decoration: none;
 }
 

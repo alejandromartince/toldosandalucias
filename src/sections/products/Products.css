@@ -40,6 +40,11 @@ OPCIONES CONTENEDOR SUPERIOR IZQUIERDA
 .model-productos{
   height: 100%;
   width: 55%;
+  cursor: grab;
+}
+
+.model-productos:active{
+  cursor: grabbing;
 }
 
 .contenedor-navegacion-productos {
@@ -63,7 +68,7 @@ CONTENEDOR DERECHA
   height: 100%;
   width: 90%;
   display: flex;
-  padding: 5rem 2rem;
+  padding: 4rem 2rem;
   flex-direction: column;
 }
 

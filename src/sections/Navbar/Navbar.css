@@ -1,95 +1,4 @@
 /* ===============================
-OPCIONES GENERALES
-=============================== */
-header {
-  width: 100%;
-  padding: 1rem 0;
-}
-
-.navbar {
-  position: fixed;
-  width: 100%;
-  z-index: 10;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
-  background-color: transparent;
-}
-
-
-.navbar::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #283935;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  z-index: -1; 
-}
-
-
-.navbar__scrolled::before {
-  opacity: .9;
-}
-
-.navbar__scrolled {
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-
-/* ===============================
-OPCIONES DEL LOGO
-=============================== */
-
-.navbar__logo img {
-  width: 6.25rem;
-  margin-left: 1rem;
-}
-
-/* ===============================
-OPCIONES DE LA BARRA DE PROGRESO
-================================*/
-
-.navbar__progress-bar {
-  position: fixed;
-  top: 4rem;
-  left: 0;
-  height: 6px;
-  background-color: var(--blanco); /* o el color que prefieras */
-  z-index: 20;
-  transition: width 0.2s ease-out;
-}
-
-
-/* ===============================
-OPCIONES DEL MENU CENTRAL 
-=============================== */
-.navbar__nav {
-  display: flex;
-  gap: 2rem;
-}
-
-.nav_link {
-  cursor: pointer;
-  transition: color 0.3s ease;
-  color: var(--blanco-texto-navbar);
-}
-
-.nav_link:hover {
-  color: var(--blanco);
-  opacity: 1;
-}
-
-.nav_link.active_link {
-  color: var(--blanco);
-}
-
-/* ===============================
 OPCIONES DEL SELECTOR DE IDIOMA
 =============================== */
 .selector-idioma-dropdown {
@@ -120,6 +29,18 @@ OPCIONES DEL SELECTOR DE IDIOMA
   display: flex;
   flex-direction: column;
   padding: 5px;
+
+  opacity: 0;
+  transform: scaleY(0.95);
+  transform-origin: top;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.menu-idiomas.visible {
+  opacity: 1;
+  transform: scaleY(1);
+  pointer-events: auto;
 }
 
 .idioma-opcion {

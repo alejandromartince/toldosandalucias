@@ -7,7 +7,7 @@ import { Link } from "react-scroll";
 import { infoFooter } from "../../constants/infoFooter";
 
 //Importamos el contexto del idioma
-import { useIdioma } from "../../contexts/IdiomaContext";
+import { useIdioma } from "../../Contexts/IdiomaContext";
 
 //Importamos los iconos
 import { FaTiktok } from "react-icons/fa";
@@ -52,11 +52,11 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <p>{informacion[idioma].ayuda} </p>
-                <FaWhatsapp size={25} />
+                <p style={{textShadow:"none"}}>{informacion[idioma].ayuda} </p>
+                <FaWhatsapp size={25}/>
               </a>
             </div>
-            <p>{informacion[idioma].telefono}</p>
+            <p style={{textShadow:"none"}}>{informacion[idioma].telefono}</p>
             <div className="espaciador"></div>
           </div>
         </div>

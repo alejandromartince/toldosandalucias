@@ -8,14 +8,14 @@ import RutaPersonalizarToldos from "./paginas/PersonalizarToldos/RutaPersonaliza
 import RutaGaleria from "./paginas/galeria/RutaGaleria";
 
 // Contexto
-import { IdiomaProvider } from "./contexts/IdiomaContext";
+import { IdiomaProvider } from "./Contexts/IdiomaContext";
 import { useProgress } from "@react-three/drei";
 
 
 const App = () => {
+
   const [cargando, setCargando] = useState(true);
   const { progress } = useProgress();
-
 
   useEffect(() => {
     if (progress === 100) {

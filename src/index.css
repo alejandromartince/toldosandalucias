@@ -57,9 +57,9 @@ p {
 footer a { 
   font-size: 1.1rem;
   line-height: 2rem;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1); /* Sombra con desplazamiento y difusa */
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   color: white;
+  text-shadow: none;
   text-decoration: none;
 }

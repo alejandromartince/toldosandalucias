@@ -1,6 +1,3 @@
-//Importamos los hooks de react
-import { Link } from "react-router-dom";
-
 //Importamos lo necesario para el carrusel
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
@@ -37,7 +34,7 @@ const CarruselTrabajos = () => {
       >
         {trabajos.map((trabajo, index) => (
           <SwiperSlide key={index} className="swiper-slide">
-            <Link to="/Galeria">
+            <a href="/Galeria" target="_blank" rel="noopener noreferrer">
               <div className="slide-container">
                 <h3 className="image-title">{trabajo.titulo[idioma]}</h3>{" "}
                 {/* Titulo del trabajo */}
@@ -51,7 +48,7 @@ const CarruselTrabajos = () => {
                 />
                 <div className="overlay"></div>
               </div>
-            </Link>
+            </a>
           </SwiperSlide>
         ))}
       </Swiper>

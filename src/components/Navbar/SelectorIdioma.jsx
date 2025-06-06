@@ -47,8 +47,8 @@ const SelectorIdioma = () => {
       <IoIosArrowDown size={20} style={{ transform: desplegado ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s', color:"white" }} />
       </button>
       
-      {desplegado && (
-        <div className="menu-idiomas">
+      
+        <div className={`menu-idiomas ${desplegado ? 'visible' : ''}`}>
           {Object.entries(idiomas).map(([codigo, ruta]) => (
             <button
               key={codigo}
@@ -59,7 +59,7 @@ const SelectorIdioma = () => {
             </button>
           ))}
         </div>
-      )}
+      
     </div>
   );
 };
