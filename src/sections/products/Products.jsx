@@ -7,6 +7,7 @@ import { infoProductos } from "../../constants/infoProductos";
 import ToldosProductos from "../../EscenasObjetos/ToldosProductos";
 import BotonProductos from "../../components/Botones/BotonProductos";
 import BotonInterrogacion from "../../components/Botones/BotonInterrogacion";
+import PersonalizarToldos from "../PersonalizarToldos/PersonalizarToldos";
 
 //Importamos los iconos
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
@@ -110,27 +111,9 @@ const Products = () => {
 
       {/* POPUP SUPERIOR */}
       {mostrarPopup && (
-        <div className="popup-overlay-prueba">
-          <div className="popup-contenido-prueba">
-            <button
-              onClick={() => setMostrarPopup(false)}
-              className="cerrar-boton-prueba"
-            >
-              X
-            </button>
-            <h2>
-              {idioma === "es"
-                ? "¡Personaliza tu toldo!"
-                : "Customize your awning!"}
-            </h2>
-            <p>
-              {idioma === "es"
-                ? "Aquí podrás personalizar tu producto a medida."
-                : "Here you can customize your product."}
-            </p>
-          </div>
-        </div>
+        <PersonalizarToldos onCerrar={() => setMostrarPopup(false)} />
       )}
+
     </section>
   );
 };
