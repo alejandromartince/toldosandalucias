@@ -61,6 +61,14 @@ OPCIONES CONTENEDOR SUPERIOR IZQUIERDA
   width: 20%;
 }
 
+.icono-productos{
+  transition: fill .2s ease-in-out;
+}
+
+.icono-productos:hover{
+fill: white;
+}
+
 /* ============================
 CONTENEDOR DERECHA 
 ============================ */

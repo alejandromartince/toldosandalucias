@@ -8,16 +8,18 @@ export const infoPersonalizarToldos = {
         en: "For a fully customized experience, visit us at our offices with no strings attached."
     },
     descripcion: {
-        es: (<>
-            En esta sección podrás visualizar nuestras lonas más populares.
-            <br />
-            Para comenzar, seleccione sus opciones.
-        </>),
+        es: (
+            <>
+                En esta sección podrás visualizar nuestras opciones más populares.
+                <br />
+                Para comenzar, seleccione sus preferencias.
+            </>
+        ),
         en: (
             <>
-                In this section, you can view our most popular fabrics.
+                In this section, you can view our most popular options.
                 <br />
-                To get started, select your options.
+                To get started, select your preferences.
             </>
         )
     }

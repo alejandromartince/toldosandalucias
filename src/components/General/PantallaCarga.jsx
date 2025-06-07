@@ -17,7 +17,6 @@ const PantallaCarga = () => {
   return (
     <div className={`pantalla-carga ${progress >= 100 ? "fade-out" : ""}`}>
       <div className="carga-contenedor">
-        <img src="/assets/Logo/Logo.png" alt="Logo" className="carga-logo" />
         <div className="spinner"></div>
         <p>Cargando...</p>
         

@@ -1,4 +1,8 @@
-export const informacionBoton = (idioma, id) => {
+import useTipoDispositivo from "../Hooks/useTipoDispositivo";
+
+const useInformacionBoton = (idioma, id) => {
+  const dispositivo = useTipoDispositivo();
+
   const botones = [
     {
       id: "Home",
@@ -6,13 +10,16 @@ export const informacionBoton = (idioma, id) => {
         es: "Realizar un presupuesto",
         en: "Make a quote",
       },
-      url: "https://web.whatsapp.com/send?phone=34679847618&text=",
+      url:
+        dispositivo !== "movil"
+          ? "https://web.whatsapp.com/send?phone=34679847618&text="
+          : "https://wa.me/34679847618",
     },
     {
       id: "Historia",
       texto: {
         es: "Ver Productos",
-        en: "See Porducts",
+        en: "See Products",
       },
       url: "products",
       offset: -20,
@@ -23,33 +30,32 @@ export const informacionBoton = (idioma, id) => {
         es: "Personaliza tu toldo",
         en: "Customize your awning",
       },
-      url: "/PersonalizarToldos", // Asegúrate de que la URL sea correcta
+      url: "/PersonalizarToldos",
     },
     {
-      id: "Beneficios", // Nuevo botón agregado
+      id: "Beneficios",
       texto: {
-        es: "MÁS INFORMACIÓN", // Texto en español
-        en: "MORE INFORMATION", // Texto en inglés
+        es: "MÁS INFORMACIÓN",
+        en: "MORE INFORMATION",
       },
       subtexto: {
         es: "SIN COMPROMISO",
-        en: "NO STRING ATTACHED"
+        en: "NO STRING ATTACHED",
       },
-      url: "https://web.whatsapp.com/send?phone=34679847618&text=", // URL de la nueva sección
+      url: "https://web.whatsapp.com/send?phone=34679847618&text=",
     },
-
-
   ];
-  // Encuentra el botón con el ID dado
-  const boton = botones.find((boton) => boton.id === id);
 
-  // Si el botón existe, devuelve el texto en el idioma seleccionado
+  const boton = botones.find((b) => b.id === id);
+
   return boton
     ? {
-      id: boton.id,
-      texto: boton.texto[idioma] || boton.texto.es,
-      url: boton.url,
-      offset: boton.offset || 0,
-    }
+        id: boton.id,
+        texto: boton.texto[idioma] || boton.texto.es,
+        url: boton.url,
+        offset: boton.offset || 0,
+      }
     : null;
 };
+
+export default useInformacionBoton;

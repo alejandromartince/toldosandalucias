@@ -10,12 +10,15 @@ import Footer from "../../sections/footer/Footer"
 
 //Importamos los hooks
 import PantallaCarga from "../../components/General/PantallaCarga"
+import useTipoDispositivo from "../../Hooks/useTipoDispositivo"
 
 //Importamos los estilos
 import './RutaPrincipal.css'
 
 // Componente que gestiona la ruta principal con lógica de carga
 const RutaPrincipal = ({ cargando }) => {
+
+  const dispositivo = useTipoDispositivo();
   if (cargando) return <PantallaCarga />;
 
   return (
@@ -24,12 +27,25 @@ const RutaPrincipal = ({ cargando }) => {
       <Home />
       
       <div className="pagina-principal">
-        <Historia />
-        <NuestrosTrabajos />
-        <Products />
-        <Beneficios />
-        <Contacto />
-        <Footer />
+        {dispositivo !== 'movil' ? (
+          <>
+            <Historia />
+            <NuestrosTrabajos />
+            <Products />
+            <Beneficios />
+            <Contacto />
+            <Footer />
+          </>
+        ) : (
+          <>
+            <NuestrosTrabajos />
+            <Historia />
+            <Products />
+            <Beneficios />
+            <Contacto />
+            <Footer />
+          </>
+        )}
       </div>
     </>
   );

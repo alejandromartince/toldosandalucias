@@ -1,11 +1,10 @@
-import React from "react";
 import { Link } from "react-scroll";
-import { informacionBoton } from "../../constants/infoBotones";  // Asegúrate de importar la función
+import  useInformacionBoton  from "../../constants/infoBotones";  // Asegúrate de importar la función
 
 import "./BotonLinea.css";
 
 const LinkLinea = ({ idioma, className, id, offset }) => {
-  const boton = informacionBoton(idioma, id);
+  const boton = useInformacionBoton(idioma, id);
 
   return (
     <Link

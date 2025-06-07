@@ -2,14 +2,14 @@
 import { useIdioma } from "../../contexts/IdiomaContext";
 
 //Importamos la informacion
-import { informacionBoton } from "../../constants/infoBotones";
+import useInformacionBoton from "../../constants/infoBotones";
 
 //Importamos el estilo
 import "./BotonProductos.css";
 
 const BotonProductos = ({ onAbrir }) => {
   const { idioma } = useIdioma();
-  const titulo = informacionBoton(idioma, "Productos");
+  const titulo = useInformacionBoton(idioma, "Productos");
 
   return (
     <button onClick={onAbrir} className="boton-producto">

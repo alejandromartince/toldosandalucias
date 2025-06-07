@@ -24,12 +24,6 @@ const NavbarMobile = () => {
   useScrollEffect(secciones, setActiveSection); // Hook para manejar el scroll
   const [menuOpen, setMenuOpen] = useState(false);
 
-  //Scroll para la barra de progreso
-  const scrollYProgress = (() => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    return docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-  })();
 
   useEffect(() => {
     const html = document.documentElement;
@@ -109,18 +103,12 @@ const NavbarMobile = () => {
                 ))}
             </nav>
           </div>
-          
+
           <div className="contenedor-boton-menu-desplegado">
-            <BotonLinea
-              idioma={idioma}
-              id="Home" // Pasa un id único si es necesario
-              className="boton-linea" // Puedes agregar una clase personalizada si lo necesitas
-            />
+            <a href="https://wa.me/34679847618">{idioma === 'es' ? "REALIZA TU PRESUPUESTO AQUÍ" : "GET YOUR QUOTE HERE"}</a>
           </div>
         </div>
 
-        {/* Barra de progreso */}
-        <div className="navbar__progress-bar" style={{ width: `${scrollYProgress}%` }}></div>
       </header>
     </>
   );

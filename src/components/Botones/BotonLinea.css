@@ -8,7 +8,8 @@ BOTON LINEA
   background-color: transparent;
   text-align: center;
   text-transform: uppercase;
-  transition: color 0.5s ease, text-shadow 0.3s ease, border-bottom 0.5s ease; /* Animación del color */
+  transition: color 0.5s ease, text-shadow 0.3s ease, border-bottom 0.5s ease;
+  /* Animación del color */
   -webkit-transition: color 0.5s ease, text-shadow 0.3s ease,
     border-bottom 0.5s ease;
   z-index: 1;
@@ -20,12 +21,16 @@ BOTON LINEA
   content: "";
   position: absolute;
   top: 0;
-  left: 50%; /* Empieza en el centro */
-  width: 100%; /* Fijamos el ancho desde el inicio */
-  height: 100%; /* Altura del botón */
+  left: 50%;
+  /* Empieza en el centro */
+  width: 100%;
+  /* Fijamos el ancho desde el inicio */
+  height: 100%;
+  /* Altura del botón */
   background-color: white;
   border-radius: 2rem;
-  transform: translateX(-50%) scale(0, 1); /* En Safari, scale(0,1) es más estable */
+  transform: translateX(-50%) scale(0, 1);
+  /* En Safari, scale(0,1) es más estable */
   transition: transform 0.4s cubic-bezier(0.4, 1, 0.6, 1), box-shadow 0.7s ease,
     color 0.3s ease;
   -webkit-transition: transform 0.4s cubic-bezier(0.4, 1, 0.6, 1),
@@ -34,12 +39,14 @@ BOTON LINEA
 }
 
 .boton-linea:hover::before {
-  transform: translateX(-50%) scale(1, 1); /* Expande completamente el color al hacer hover */
+  transform: translateX(-50%) scale(1, 1);
+  /* Expande completamente el color al hacer hover */
   box-shadow: 0 0px 10px rgb(255, 255, 255);
 }
 
 .boton-linea:hover {
-  color: var(--negro); /* Cambia el color del texto */
+  color: var(--negro);
+  /* Cambia el color del texto */
   text-shadow: none;
   border-bottom: 1px solid transparent;
 }
@@ -105,3 +112,11 @@ BOTON LINEA
   transform: scale(0.98);
 }
 
+/* ============================
+MEDIA QUERIES
+============================ */
+@media (max-width: 768px) {
+  .boton-linea {
+    padding: 0.5rem .5rem;
+  }
+}

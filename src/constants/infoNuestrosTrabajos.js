@@ -36,20 +36,20 @@ export const imagesNuestrosTrabajos = [
     },
   },
   {
-    imagen: "/assets/SliderTrabajos/Terrazas/Terraza-1.png",
+    imagen: "/assets/SliderTrabajos/Terrazas/Terraza-1.jpg",
     titulo: {
       es: "Terraza",
       en: "Terrace",
     },
   },{
-    imagen: "/assets/SliderTrabajos/Verandas/Veranda-1.png",
+    imagen: "/assets/SliderTrabajos/Verandas/Veranda-1.jpg",
     titulo: {
       es: "Toldo Veranda",
       en: "Veranda Awning",
     },
   },
   {
-    imagen: "/assets/SliderTrabajos/Cortinas/Cortina-1.jpeg",
+    imagen: "/assets/SliderTrabajos/Stores/Store-1.jpeg",
     titulo: {
       es: "Stores",
       en: "Stores",
