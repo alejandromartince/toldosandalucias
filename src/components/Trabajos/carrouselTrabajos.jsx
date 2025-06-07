@@ -24,13 +24,29 @@ const CarruselTrabajos = () => {
         modules={[Navigation, Pagination, Autoplay]}
         navigation
         loop={true}
-        autoplay={{ delay: 4000, disableOnInteraction: false }} // Asegurar que siga funcionando tras interacción
+        autoplay={{ delay: 4000, disableOnInteraction: false }}
         pagination={false}
         direction="horizontal"
-        slidesPerView={4}
-        slidesPerGroup={1}
         simulateTouch={false}
         className="carrusel-trabajos"
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+          },
+          768: {
+            slidesPerView: 2,
+            slidesPerGroup: 1,
+          },
+          1024: {
+            slidesPerView: 3,
+            slidesPerGroup: 1,
+          },
+          1450:{
+            slidesPerView: 4,
+            slidesPerGroup: 1,
+          }
+        }}
       >
         {trabajos.map((trabajo, index) => (
           <SwiperSlide key={index} className="swiper-slide">
