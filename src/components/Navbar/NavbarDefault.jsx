@@ -6,7 +6,7 @@ import { useState } from "react";
 import SelectorIdioma from '../../components/Navbar/SelectorIdioma';
 
 //Importamos el contexto del idioma
-import { useIdioma } from '../../Contexts/IdiomaContext';
+import { useIdioma } from '../../contexts/IdiomaContext';
 
 //Importamos el hook personalizado para manejar el scroll
 import { useScrollEffect } from '../../Hooks/Navbar/useScrollEffect'

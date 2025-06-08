@@ -53,6 +53,7 @@ OPCIONES DE CONTENIDO
 .contenedor-home p {
   text-wrap: balance;
   text-align: justify;
+  max-width: 90%;
 }
 
 /* ============================
@@ -98,5 +99,6 @@ MEDIA QUERIES
     line-height: 1.7rem;
     text-align: justify;
     hyphens: auto;
+    max-width: 100%;
   }
 }

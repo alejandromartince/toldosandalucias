@@ -2,123 +2,125 @@
 OPCIONES GENERALES
 ============================ */
 .beneficios {
-    height: 120vh;
-    background-color: aliceblue;
-    color: var(--negro-claro);
+  height: 120vh;
+  background-color: aliceblue;
+  color: var(--negro-claro);
+  padding-bottom: 4rem;
 }
 
 /* ============================
 ENCABEZADO
 ============================ */
 .encabezado-beneficios {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4rem;
 }
 
 .encabezado-beneficios h1 {
-    text-shadow: none;
+  text-shadow: none;
 }
 
 .encabezado-beneficios p {
-    text-shadow: none;
-    text-align: center;
-    padding-top: 1rem;
-    max-width: 60%;
+  text-shadow: none;
+  text-align: center;
+  padding-top: 1rem;
+  max-width: 60%;
 }
 
 /* ============================
 GALERIA DE FOTOS
 ============================ */
 .galeria-contenedor {
-    width: 99%;
-    margin: auto;
+  width: 100%;
+  margin: auto;
+  padding: 0 1rem 1rem 1rem; /* padding izquierda y derecha */
+  box-sizing: border-box; /* para que el padding no afecte el ancho */
+  height: 80%;
 }
 
 /* ============================
 TITULOS GALERIA
 ============================ */
 .titulos-container {
-    display: flex;
-    justify-content: space-around;
-    padding-top: 6rem;
-    padding-bottom: 2rem;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 6rem;
+  padding-bottom: 2rem;
 }
 
 .titulo {
-    cursor: pointer;
-    transition: color 0.3s ease;
-    font-size: 1.5rem;
-    font-family:sans-serif;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-size: 1.5rem;
+  font-family: sans-serif;
 }
 
-
 .titulo.invisible {
-    color: var(--gris-invisible);
+  color: var(--gris-invisible);
 }
 
 .titulo.invisible:hover {
-    color: var(--negro-claro);
+  color: var(--negro-claro);
 }
 
 /* ============================
 IMAGENES
 ============================ */
 .imagenes-container {
-    display: flex;
-    gap: 1rem;
-    height: 45rem;
-    overflow: hidden;
+  display: flex;
+  gap: 1rem;
+height: auto;
+  overflow: hidden;
 }
 
 .imagen-item {
-    flex: 1;
-    position: relative;
-    transition: all 0.5s ease;
-    opacity: 1;
-    overflow: hidden;
-    cursor: pointer;
+  flex: 1;
+  position: relative;
+  transition: all 0.5s ease;
+  opacity: 1;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .imagen-item.oculto {
-    flex: 0;
-    opacity: 0;
-    pointer-events: none;
+  flex: 0;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .imagen-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .imagen-item.expandida {
-    flex: 5;
+  flex: 5;
 }
 
 /* ============================
 INFORMACION CARTAS
 ============================ */
 .info-carta {
-    position: absolute;
-    right: 5rem;
-    top: 50%;
-    transform: translateY(-50%);
-    border: 1px solid rgb(0, 0, 0);
-    background-color: aliceblue;
-    padding: 2rem;
-    font-size: 0.95rem;
-    height: 50%;
-    width: 20%;
-    box-sizing: border-box;
-    cursor:auto;
+  position: absolute;
+  right: 5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid rgb(0, 0, 0);
+  background-color: aliceblue;
+  padding: 2rem;
+  font-size: 0.95rem;
+  height: 50%;
+  width: 20%;
+  box-sizing: border-box;
+  cursor: auto;
 }
 
 .info-carta p {
-    text-shadow: none;
-    color: black;
-    text-wrap: balance;
-    line-height: 1.5;
+  text-shadow: none;
+  color: black;
+  text-wrap: balance;
+  line-height: 1.5;
 }
-

@@ -5,8 +5,7 @@ OPCIONES GENERALES
   height: 100vh;
   width: 100%;
 
-  overflow-x: hidden;/* <-- importante para evitar desbordamientos */
-
+  overflow-x: hidden; /* <-- importante para evitar desbordamientos */
 
   background-image: url(/assets/Fondo/fondo_reticula.png);
   background-size: cover;
@@ -22,8 +21,11 @@ SECCION SUPERIOR
   display: flex;
   flex-direction: row;
   width: 100%;
-  
 }
+
+/*=============================
+OPCIONES SUPERIOR IZQUIERDA (OBJETO 3D)
+=============================*/
 
 .contenedor-izquierda {
   flex: 0 0 55%;
@@ -32,10 +34,13 @@ SECCION SUPERIOR
   padding: 1rem;
 }
 
+/*=============================
+OPCIONES SUPERIOR DERECHA (TEXTO)
+=============================*/
 .contenedor-derecha {
   flex: 0 0 40%;
   max-width: 40%;
-  
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -45,16 +50,43 @@ SECCION SUPERIOR
   box-sizing: border-box;
 }
 
-.contenedor-derecha p{
+.contenedor-derecha p {
   text-align: justify;
   hyphens: auto;
 }
 
+.text-productos {
+  padding-top: 2rem;
+}
 
+.text-productos h3 {
+  font-weight: 300;
+}
+
+/*=============================
+OPCIONES PARTE INFERIOR (BOTONES)
+=============================*/
+.contenedor-botones-prueba {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* centrados horizontalmente */
+  align-items: center; /* centrados verticalmente */
+  gap: 1rem; /* espacio entre botones */
+  padding: 1rem 0;
+}
 
 /* ============================
 MEDIA QUERIES
 ============================ */
+/* ============================
+MEDIA QUERIES
+============================ */
+@media (max-width: 1150px) {
+  .contenedor-derecha h1 {
+    font-size: 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .contenedor-superior-productos {
     flex-direction: column;
@@ -64,6 +96,37 @@ MEDIA QUERIES
   .contenedor-izquierda,
   .contenedor-derecha {
     flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .contenedor-derecha h1 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .contenedor-derecha p {
+    font-size: 1rem;
+    line-height: 1.7rem;
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  .contenedor-botones-prueba {
+    flex-direction: column; /* los botones uno debajo del otro en móvil */
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 0;
+  }
+
+  .boton-centro-prueba,
+  .boton-derecha-prueba {
+    width: 80%; /* hago los botones más grandes en móvil */
+    text-align: center;
   }
 }
