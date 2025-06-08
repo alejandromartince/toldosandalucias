@@ -116,3 +116,13 @@ ESTILOS PARA EL CARRUSEL DE TRABAJOS
   z-index: 3;
   padding: 0 1rem;
 }
+
+/* ============================
+MEDIA QUERIES
+============================ */
+@media (max-width:768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    transform: scale(.7);
+  }
+}

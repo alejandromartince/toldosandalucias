@@ -2,143 +2,68 @@
 OPCIONES GENERALES
 ============================ */
 .seccion-productos-prueba {
-  position: relative;
+  height: 100vh;
+  width: 100%;
+
+  overflow-x: hidden;/* <-- importante para evitar desbordamientos */
+
+
   background-image: url(/assets/Fondo/fondo_reticula.png);
   background-size: cover;
   background-position: center;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
 }
 
 /* ============================
-OPCIONES PARTE SUPERIOR
+SECCION SUPERIOR
 ============================ */
-.grid-productos-superior-prueba {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 60%;
-  gap: 2rem;
-  padding: 2rem;
-  position: relative;
-  z-index: 1;
-}
+.contenedor-superior-productos {
+  height: 70%;
 
-/* ============================
-OPCIONES CONTENEDOR SUPERIOR IZQUIERDA
-============================ */
-.contenedor-izquierda{
-  height: 55vh;
-  width: 100%;
-}
-
-.model-proyecto-container{
-  height: 100%;
-  width: 100%;
-}
-
-.model-productos{
-  height: 100%;
-  width: 55%;
-  cursor: grab;
-}
-
-.model-productos:active{
-  cursor: grabbing;
-}
-
-.contenedor-navegacion-productos {
-  position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   width: 100%;
-  z-index: 20;
+  
 }
 
-.navegacion-productos{
+.contenedor-izquierda {
+  flex: 0 0 55%;
+  max-width: 55%;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.contenedor-derecha {
+  flex: 0 0 40%;
+  max-width: 40%;
+  
   display: flex;
-  justify-content: space-around;
-  width: 20%;
-}
-
-.icono-productos{
-  transition: fill .2s ease-in-out;
-}
-
-.icono-productos:hover{
-fill: white;
-}
-
-/* ============================
-CONTENEDOR DERECHA 
-============================ */
-.contenedor-derecha{
-  height: 100%;
-  width: 90%;
-  display: flex;
-  padding: 4rem 2rem;
   flex-direction: column;
+  justify-content: center;
+
+  padding-right: 2rem;
+  overflow: hidden; /* por si hay algo interno que se desborda */
+  box-sizing: border-box;
 }
 
-.contenedor-derecha h1 {
-  font-size: 2.2rem;
-  text-align: left;
-  text-transform: uppercase;
-  font-weight: 400;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.678);
-}
-
-.contenedor-derecha h1, .titulo-interrogacion,.contenedor-derecha p, .hr-productos{
-  width: 80%;
-  margin: 0 auto;
-}
-
-.contenedor-derecha h3 {
-  font-size: 1.6rem;
-  text-transform: uppercase;
-  font-weight: 200;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.678);
-}
-
-.contenedor-derecha p {
+.contenedor-derecha p{
   text-align: justify;
-  font-weight: lighter;
-  text-wrap: balance; /* PARA NO DEJAR PALABRAS SUELTAS */
+  hyphens: auto;
 }
 
-.titulo-interrogacion{
-  margin-top: 2rem;
-  justify-content: space-between;
-  padding: 0 1rem;
-  display: flex;
-  align-items: center;
-}
+
 
 /* ============================
-OPCIONES DE LOS BOTONES (OCUPAN 100VH PERO EN EL FONDO)
+MEDIA QUERIES
 ============================ */
-.contenedor-botones-prueba {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 2rem;
-  z-index: 1;
+@media (max-width: 768px) {
+  .contenedor-superior-productos {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .contenedor-izquierda,
+  .contenedor-derecha {
+    flex: 0 0 100%;
+    width: 100%;
+  }
 }
-
-.boton-centro-prueba {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.boton-derecha-prueba {
-  position: absolute;
-  right: 6%;
-}
-
-
-

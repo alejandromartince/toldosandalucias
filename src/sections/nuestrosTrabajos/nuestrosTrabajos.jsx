@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import CarruselTrabajos from "../../components/Trabajos/carrouselTrabajos";
 
 //Importamos los estilos
-import "../nuestrosTrabajos/nuestrosTrabajos.css"; // Archivo de estilos
+import './nuestrosTrabajos.css'
 
 const NuestrosTrabajos = () => {
  

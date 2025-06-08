@@ -51,7 +51,7 @@ const Products = () => {
     <section className="seccion-productos-prueba" id="products">
 
       {/* CONTENEDOR DE GRID SUPERIOR */}
-      <div className="grid-productos-superior-prueba">
+      <div className="contenedor-superior-productos">
 
         {/* SECCION DE LA IZQUIERDA, OBJETOS 3D */}
         <div className="contenedor-izquierda">
@@ -92,10 +92,10 @@ const Products = () => {
         <div className="contenedor-derecha">
           <h1>{tituloProducto[idioma]}</h1>
           <hr className="hr-productos" />
-          <div className="titulo-interrogacion">
+          <div className="text-productos">
             <h3>{productoActual.titulo[idioma]}</h3>
+            <p>{productoActual.descripcion[idioma]}</p>
           </div>
-          <p>{productoActual.descripcion[idioma]}</p>
         </div>
       </div>
 

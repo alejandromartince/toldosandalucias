@@ -11,8 +11,7 @@ import { imagesNuestrosTrabajos } from "../../constants/infoNuestrosTrabajos";
 //Importamos el contexto del idioma
 import { useIdioma } from "../../contexts/IdiomaContext";
 
-//Importamos estilos
-import "../../sections/nuestrosTrabajos/nuestrosTrabajos";
+
 
 const CarruselTrabajos = () => {
   const trabajos = imagesNuestrosTrabajos;
@@ -53,9 +52,8 @@ const CarruselTrabajos = () => {
             <a href="/Galeria" target="_blank" rel="noopener noreferrer">
               <div className="slide-container">
                 <h3 className="image-title">{trabajo.titulo[idioma]}</h3>{" "}
-                {/* Titulo del trabajo */}
                 <div className="watermark-container">
-                  <span className="watermark-text">Toldos Andalucía</span>
+                  <span className="watermark-text">{trabajo.descripcion[idioma]}</span>
                 </div>
                 <img
                   src={trabajo.imagen} // Ruta de la imagen

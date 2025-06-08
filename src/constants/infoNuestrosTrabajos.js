@@ -13,12 +13,20 @@ export const imagesNuestrosTrabajos = [
       es: "Toldo Articulado",
       en: "Articulated Awning",
     },
+    descripcion: {
+      es: "Articulado Extremo",
+      en: "EXTREME"
+    },
   },
   {
-    imagen: "/assets/SliderTrabajos/Capotas/Capotas-1.png",
+    imagen: "/assets/SliderTrabajos/Capotas/Capotas-1.jpg",
     titulo: {
       es: "Capota",
       en: "Hoods",
+    },
+    descripcion: {
+      es: "Articulado Extremo",
+      en: "EXTREME"
     },
   },
   {
@@ -27,12 +35,20 @@ export const imagesNuestrosTrabajos = [
       es: "Pérgola",
       en: "Pergola",
     },
+    descripcion: {
+      es: "Articulado Extremo",
+      en: "EXTREME"
+    },
   },
   {
     imagen: "/assets/SliderTrabajos/Cofres/Cofre-1.jpg",
     titulo: {
       es: "Toldo Cofre",
       en: "Chest Awning",
+    },
+    descripcion: {
+      es: "Articulado Extremo",
+      en: "EXTREME"
     },
   },
   {
@@ -41,11 +57,20 @@ export const imagesNuestrosTrabajos = [
       es: "Terraza",
       en: "Terrace",
     },
-  },{
+    descripcion: {
+      es: "Articulado Extremo",
+      en: "EXTREME"
+    },
+  }, 
+  {
     imagen: "/assets/SliderTrabajos/Verandas/Veranda-1.jpg",
     titulo: {
       es: "Toldo Veranda",
       en: "Veranda Awning",
+    },
+    descripcion: {
+      es: "Articulado Extremo",
+      en: "EXTREME"
     },
   },
   {
@@ -54,12 +79,20 @@ export const imagesNuestrosTrabajos = [
       es: "Stores",
       en: "Stores",
     },
+    descripcion: {
+      es: "Articulado Extremo",
+      en: "EXTREME"
+    },
   },
   {
     imagen: "/assets/SliderTrabajos/Velas/Vela-1.jpg",
     titulo: {
       es: "Vela",
       en: "Sail",
+    },
+    descripcion: {
+      es: "Articulado Extremo",
+      en: "EXTREME"
     },
   },
 ];
