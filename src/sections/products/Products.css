@@ -1,27 +1,28 @@
 /* ============================
 OPCIONES GENERALES
 ============================ */
-.seccion-productos-prueba {
+.seccion-productos {
+  position: relative;
   height: 100vh;
   width: 100%;
-
-  overflow-x: hidden; /* <-- importante para evitar desbordamientos */
-
   background-image: url(/assets/Fondo/fondo_reticula.png);
   background-size: cover;
   background-position: center;
+  overflow: hidden;
 }
+
 
 /* ============================
 SECCION SUPERIOR
 ============================ */
 .contenedor-superior-productos {
-  height: 70%;
-
   display: flex;
   flex-direction: row;
   width: 100%;
+  height: 100%;
+  box-sizing: border-box;
 }
+
 
 /*=============================
 OPCIONES SUPERIOR IZQUIERDA (OBJETO 3D)
@@ -30,8 +31,55 @@ OPCIONES SUPERIOR IZQUIERDA (OBJETO 3D)
 .contenedor-izquierda {
   flex: 0 0 55%;
   max-width: 55%;
-  box-sizing: border-box;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   padding: 1rem;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.model-proyecto-container {
+  height: 60%;
+  width: 100%;
+  cursor: grab;
+}
+
+.model-proyecto-container:active {
+  cursor: grabbing;
+}
+
+.model-productos {
+  width: 100%;
+}
+
+.contenedor-navegacion-productos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+
+  z-index: 0;
+  /* más alto que el resto */
+  pointer-events: auto;
+  /* aseguramos que se puedan clicar */
+}
+
+.icono-productos {
+  position: relative;
+  z-index: 101;
+  /* más alto que .boton-centro-prueba (z-index: 11) */
+  transition: fill 0.3s ease-in-out;
+  cursor: pointer;
+  color: var(--blanco-footer);
+  font-size: 30px;
+}
+
+.icono-productos:hover {
+  fill: white;
 }
 
 /*=============================
@@ -43,10 +91,12 @@ OPCIONES SUPERIOR DERECHA (TEXTO)
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: end;
 
-  padding-right: 2rem;
-  overflow: hidden; /* por si hay algo interno que se desborda */
+  padding-top: 4rem;
+  overflow: visible;
+  /* por si hay algo interno que se desborda */
   box-sizing: border-box;
 }
 
@@ -60,24 +110,73 @@ OPCIONES SUPERIOR DERECHA (TEXTO)
 }
 
 .text-productos h3 {
-  font-weight: 300;
+  font-weight: 500;
 }
 
-/*=============================
-OPCIONES PARTE INFERIOR (BOTONES)
-=============================*/
+
+/* ============================
+SECCION INFERIOR (BOTONES)
+============================ */
 .contenedor-botones-prueba {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30vh;
   display: flex;
-  flex-direction: row;
-  justify-content: center; /* centrados horizontalmente */
-  align-items: center; /* centrados verticalmente */
-  gap: 1rem; /* espacio entre botones */
-  padding: 1rem 0;
+  justify-content: center;
+  align-items: end;
+  padding-bottom: 6rem;
+  background: transparent;
+}
+
+.boton-centro-prueba {
+  z-index: 11;
 }
 
 /* ============================
-MEDIA QUERIES
+MENSAJE INVISIBLE DE COPYRIGHT
 ============================ */
+.boton-derecha-prueba {
+  display: flex;
+  justify-content: end;
+  padding-bottom: 6rem;
+  position: relative;
+  z-index: 20;
+  /* más alto que el botón principal inferior */
+}
+
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-mensaje {
+  position: absolute;
+  bottom: 125%;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: rgb(66, 66, 66);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 30;
+  /* asegúrate que está por encima de todo */
+}
+
+
+.boton-interrogacion:hover .tooltip-mensaje {
+  opacity: 0.8;
+  /* Visibilidad flojita */
+  visibility: visible;
+}
+
 /* ============================
 MEDIA QUERIES
 ============================ */
@@ -87,10 +186,88 @@ MEDIA QUERIES
   }
 }
 
+@media (max-width: 1024px) {
+  .seccion-productos {
+    padding: 2rem 0;
+  }
+
+  /* ============================
+  OPCIONES GENERAL SUPERIOR
+  ============================ */
+  .contenedor-superior-productos {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+
+  /* ============================
+OPCIONES DERECHA (TEXTO)
+============================ */
+  .contenedor-derecha {
+    order: 1;
+    width: 90%;
+    max-width: none;
+    text-align: center;
+    padding: 4rem 2rem 0rem;
+
+  }
+
+  .contenedor-derecha h1,
+  .contenedor-derecha h3 {
+    text-align: left;
+  }
+
+  /* ============================
+  OPCIONES IZQUIERDA (3D)
+  ============================ */
+  .contenedor-izquierda {
+    order: 2;
+    width: 100%;
+    max-width: none;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .contenedor-botones-prueba {
+    order: 3;
+    position: static;
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .boton-centro-prueba,
+  .boton-derecha-prueba {
+    width: 80%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .contenedor-botones-prueba,
+  .boton-derecha-prueba {
+    padding-top: 2rem;
+  }
+
+  .model-proyecto-container {
+    width: 100%;
+    height: 350px;
+    /* o lo que necesites para que se vea bien en móvil */
+  }
+
+}
+
+
 @media (max-width: 768px) {
   .contenedor-superior-productos {
     flex-direction: column;
     height: auto;
+  }
+
+  .model-proyecto-container {
+    height: 300px;
   }
 
   .contenedor-izquierda,
@@ -100,13 +277,13 @@ MEDIA QUERIES
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 1rem;
+    padding: 2rem 2rem;
     box-sizing: border-box;
   }
 
   .contenedor-derecha h1 {
-    font-size: 1.2rem;
-    text-align: center;
+    font-size: 1.8rem;
+    text-align: left;
   }
 
   .contenedor-derecha p {
@@ -117,16 +294,20 @@ MEDIA QUERIES
   }
 
   .contenedor-botones-prueba {
-    flex-direction: column; /* los botones uno debajo del otro en móvil */
+    flex-direction: column;
+    /* los botones uno debajo del otro en móvil */
     justify-content: center;
     align-items: center;
     gap: 0.8rem;
     padding: 1rem 0;
   }
 
-  .boton-centro-prueba,
-  .boton-derecha-prueba {
-    width: 80%; /* hago los botones más grandes en móvil */
+  .boton-centro-prueba {
+    width: 80%;
+    /* hago los botones más grandes en móvil */
     text-align: center;
+  }
+  .boton-derecha-prueba{
+    width: 100%;
   }
 }

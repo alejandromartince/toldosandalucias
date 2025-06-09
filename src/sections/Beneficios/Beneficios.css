@@ -5,7 +5,6 @@ OPCIONES GENERALES
   height: 120vh;
   background-color: aliceblue;
   color: var(--negro-claro);
-  padding-bottom: 4rem;
 }
 
 /* ============================
@@ -34,9 +33,13 @@ GALERIA DE FOTOS
 ============================ */
 .galeria-contenedor {
   width: 100%;
-  margin: auto;
-  padding: 0 1rem 1rem 1rem; /* padding izquierda y derecha */
-  box-sizing: border-box; /* para que el padding no afecte el ancho */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 1rem;
+  /* padding izquierda y derecha */
+  box-sizing: border-box;
+  /* para que el padding no afecte el ancho */
   height: 80%;
 }
 
@@ -71,7 +74,7 @@ IMAGENES
 .imagenes-container {
   display: flex;
   gap: 1rem;
-height: auto;
+  height: 80%;
   overflow: hidden;
 }
 

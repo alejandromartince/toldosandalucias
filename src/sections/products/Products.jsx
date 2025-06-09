@@ -48,74 +48,61 @@ const Products = () => {
   };
 
   return (
-    <section className="seccion-productos-prueba" id="products">
-
-      {/* CONTENEDOR DE GRID SUPERIOR */}
+    <section className="seccion-productos" id="products">
+      {/* CONTENEDOR SUPERIOR - Ocupa toda la pantalla */}
       <div className="contenedor-superior-productos">
-
-        {/* SECCION DE LA IZQUIERDA, OBJETOS 3D */}
+        {/* IZQUIERDA: OBJETO 3D + NAVEGACIÓN */}
         <div className="contenedor-izquierda">
           <ToldosProductos
             producto={
               <productoActual.producto
                 scale={productoActual.escala}
                 position={productoActual.position}
-                rotation={productoActual.rotation ? productoActual.rotation : [0, 0, 0]}
+                rotation={productoActual.rotation || [0, 0, 0]}
               />
             }
           />
           <div className="contenedor-navegacion-productos">
-            <div className="navegacion-productos">
-              <IoIosArrowBack
-                size={30}
-                onClick={prevProduct}
-                className="icono-productos"
-                style={{
-                  cursor: "pointer",
-                  color: "var(--blanco-texto-navbar)",
-                }}
-              />
-              <IoIosArrowForward
-                size={30}
-                onClick={nextProduct}
-                className="icono-productos"
-                style={{
-                  cursor: "pointer",
-                  color: "var(--blanco-texto-navbar)",
-                }}
-              />
-            </div>
+            <IoIosArrowBack
+              onClick={prevProduct}
+              className="icono-productos"
+            />
+            <IoIosArrowForward
+              onClick={nextProduct}
+              className="icono-productos"
+            />
           </div>
         </div>
 
-        {/* SECCION DE LA DERECHA (TEXTO) */}
+        {/* DERECHA: TEXTO Y BOTÓN DE INFO */}
         <div className="contenedor-derecha">
-          <h1>{tituloProducto[idioma]}</h1>
-          <hr className="hr-productos" />
-          <div className="text-productos">
-            <h3>{productoActual.titulo[idioma]}</h3>
-            <p>{productoActual.descripcion[idioma]}</p>
+          <div>
+            <h1>{tituloProducto[idioma]}</h1>
+            <hr className="hr-productos" />
+            <div className="text-productos">
+              <h3>{productoActual.titulo[idioma]}</h3>
+              <p>{productoActual.descripcion[idioma]}</p>
+            </div>
+          </div>
+          <div className="boton-derecha-prueba">
+            <BotonInterrogacion mensaje={productoActual.copy} />
           </div>
         </div>
       </div>
 
-      {/* CONTENEDOR DE BOTONES */}
+      {/* BOTÓN FIJO EN LA PARTE INFERIOR (30% de altura visible) */}
       <div className="contenedor-botones-prueba">
         <div className="boton-centro-prueba">
           <BotonProductos onAbrir={() => setMostrarPopup(true)} />
         </div>
-        <div className="boton-derecha-prueba">
-          <BotonInterrogacion mensaje={productoActual.copy} />
-        </div>
       </div>
 
-      {/* POPUP SUPERIOR */}
+      {/* POPUP DE PERSONALIZACIÓN */}
       {mostrarPopup && (
         <PersonalizarToldos onCerrar={() => setMostrarPopup(false)} />
       )}
-
     </section>
   );
-};
+}
 
 export default Products;
