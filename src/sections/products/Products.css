@@ -261,6 +261,9 @@ OPCIONES DERECHA (TEXTO)
 
 
 @media (max-width: 768px) {
+  .seccion-productos{
+    height: 120vh;
+  }
   .contenedor-superior-productos {
     flex-direction: column;
     height: auto;
@@ -277,13 +280,20 @@ OPCIONES DERECHA (TEXTO)
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 2rem 2rem;
     box-sizing: border-box;
   }
 
+  .contenedor-izquierda{
+    padding: 0 0 1rem 0;
+  }
+
+  .contenedor-derecha{
+    padding-top: 0;
+  }
+
   .contenedor-derecha h1 {
-    font-size: 1.8rem;
-    text-align: left;
+    font-size: 1.6rem;
+    text-align: center;
   }
 
   .contenedor-derecha p {

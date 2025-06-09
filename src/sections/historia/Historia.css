@@ -80,17 +80,22 @@ MEDIA QUERIES
   .historia-izquierda{
     width: 100%;
     justify-content:space-evenly;
+    align-items: center;
   }
 
   .historia-texto h1{
     margin-top: 2rem;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .historia-texto p{
     text-align: justify;
     hyphens: auto;
     line-height: 1.7rem;
+  }
+
+  .contenedor-botonHistoria{
+    margin: 0;
   }
 
 }
