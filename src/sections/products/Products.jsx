@@ -76,7 +76,7 @@ const Products = () => {
 
         {/* DERECHA: TEXTO Y BOTÓN DE INFO */}
         <div className="contenedor-derecha">
-          <div>
+          <div className="text-contenedor-productos">
             <h1>{tituloProducto[idioma]}</h1>
             <hr className="hr-productos" />
             <div className="text-productos">
