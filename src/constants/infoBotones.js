@@ -42,7 +42,10 @@ const useInformacionBoton = (idioma, id) => {
         es: "SIN COMPROMISO",
         en: "NO STRING ATTACHED",
       },
-      url: "https://web.whatsapp.com/send?phone=34679847618&text=",
+      url:
+        dispositivo !== "movil"
+          ? "https://web.whatsapp.com/send?phone=34679847618&text="
+          : "https://wa.me/34679847618",
     },
   ];
 

@@ -6,6 +6,10 @@ import { useIdioma } from '../../contexts/IdiomaContext';
 
 //Importamos la informacion
 import { textoBeneficios } from '../../constants/infoBeneficios';
+import useInformacionBoton from '../../constants/infoBotones';
+
+//Importamos los componentes
+import BotonCuadrado from '../Botones/BotonCuadrado';
 
 // Importamos estilos
 import "../../sections/Beneficios/Beneficios.css"
@@ -13,6 +17,7 @@ import "../../sections/Beneficios/Beneficios.css"
 const Galeria = () => {
     const [activo, setActivo] = useState(null);
     const { idioma } = useIdioma();
+    const infoBoton = useInformacionBoton(idioma, "Beneficios");
 
     const datos = Object.values(textoBeneficios).map(item => ({
         titulo: item.titulo[idioma],
@@ -48,12 +53,21 @@ const Galeria = () => {
                             className={`imagen-item ${mostrar ? 'visible' : 'oculto'} ${esActivo ? 'expandida' : ''}`}
                         >
                             <img src={item.imagen} alt={item.titulo} />
-                            {esActivo && (
-                                <div className="info-carta" onClick={(e) => e.stopPropagation()}>
+                            <div
+                                className={`info-carta ${esActivo ? 'visible' : ''}`}
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                <div>
+                                    <h3>{item.titulo}</h3>
                                     <p>{item.informacion}</p>
-                                    
                                 </div>
-                            )}
+                                <div className='divBotonCartasBeneficios'>
+                                    <BotonCuadrado
+                                        text={infoBoton.texto}
+                                        onClick={() => window.open(infoBoton.url, "_blank")}
+                                    />
+                                </div>
+                            </div>
                         </div>
                     );
                 })}

@@ -56,7 +56,7 @@ const Home = () => {
           backgroundImage:
             dispositivo !== 'ordenador'
               ? `url(${fondoActual})`
-              : `linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url(${fondoActual})`
+              : `linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(${fondoActual})`
         }}
       />
 
@@ -68,7 +68,7 @@ const Home = () => {
             backgroundImage:
               dispositivo !== 'ordenador'
                 ? `url(${fondoNuevo})`
-                : `linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url(${fondoNuevo})`,
+                : `linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(${fondoNuevo})`,
             backgroundColor: dispositivo !== 'ordenador' ? 'rgba(0, 0, 0, 0.7)' : 'transparent',
             backgroundBlendMode: dispositivo !== 'ordenador' ? 'overlay' : 'normal'
           }}

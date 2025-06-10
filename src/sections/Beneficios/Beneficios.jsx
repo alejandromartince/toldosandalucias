@@ -4,9 +4,11 @@ import { useIdioma } from "../../contexts/IdiomaContext"
 //Importamos la informacion
 import { encabezadoBeneficios } from '../../constants/infoBeneficios'
 
+//Importamos los componentes
+import Galeria from "../../components/Beneficios/Galeria";
+
 //Importamos los estilos
 import './Beneficios.css'
-import Galeria from "../../components/Beneficios/Galeria";
 
 const Beneficios = () => {
 

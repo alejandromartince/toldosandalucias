@@ -31,9 +31,8 @@ OPCIONES PARTE IZQUIERDA
   width: 100%;
 }
 
-.pHistoria {
-  text-wrap: balance;
-  text-align: justify;
+.historia-texto p{
+text-align: justify;
 }
 
 .contenedor-botonHistoria {
