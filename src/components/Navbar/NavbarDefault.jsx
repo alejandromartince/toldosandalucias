@@ -18,14 +18,12 @@ import { secciones } from '../../constants/infoNavbar';
 //Importamos el estilo
 import './NavbarDefault.css'
 
-const NavbarDefault = () => {
+const NavbarDefault = ({ pagina }) => {
 
   const { idioma } = useIdioma(); // Obtén el idioma desde el contexto
   const [activeSection, setActiveSection] = useState('home'); // Estado para la sección activa
   useScrollEffect(secciones, setActiveSection); // Hook para manejar el scroll
   const scrollY = useScrollPositionY(); //Obtenemos el scrol vertical
-
-
 
   //Scroll para la barra de progreso
   const scrollYProgress = (() => {
@@ -34,32 +32,36 @@ const NavbarDefault = () => {
     return docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
   })();
 
-
   return (
-    // <header className={`navbar ${scrollY > 100 ? 'navbar__scrolled' : ''}`}>
     <>
-      <header className={`navbar ${scrollY > 100 ? 'navbar__scrolled' : ''}`}>
+      <header className={`navbar ${(scrollY > 100) || (pagina === "galeria") ? 'navbar__scrolled' : ''}`}>
         <div className="navbar__logo">
-          <Link to="home" spy={true} smooth={true} duration={1000}>
+          <a href="/">
             <img src="/assets/Logo/Logo_Transparent.png" alt="Logo" />
-          </Link>
+          </a>
         </div>
 
         <nav className="navbar__nav">
           {secciones
             .filter(({ id }) => id !== 'historia' && id !== 'beneficios')
-            .map(({ id, texto, offset }) => (
-              <Link
-                key={id}
-                to={id}
-                smooth={true}
-                duration={800}
-                offset={offset}
-                className={`nav_link ${activeSection === id ? "active_link" : ""}`}
-              >
-                {texto[idioma]}
-              </Link>
-            ))}
+            .map(({ id, texto, offset }) => {
+              if (pagina === "principal") {
+                return (
+                  <Link
+                    key={id}
+                    to={id}
+                    smooth={true}
+                    duration={800}
+                    offset={offset}
+                    className={`nav_link ${activeSection === id ? "active_link" : ""}`}
+                  >
+                    {texto[idioma]}
+                  </Link>
+                );
+              } else {
+                return null; // o lo que quieras mostrar si no es ni principal ni galeria
+              }
+            })}
         </nav>
 
         <div className="navbar_selector">

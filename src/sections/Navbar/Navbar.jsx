@@ -8,13 +8,14 @@ import NavbarMobile from "../../components/Navbar/NavbarMobile";
 //Importamos los estilos
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({pagina}) => {
 
   const dispositivo = useTipoDispositivo(); //Asi sabemos que dispositivo manejamos
 
+
   return (
     <>
-      {dispositivo === 'movil' ? <NavbarMobile /> : <NavbarDefault />}
+      {dispositivo === 'movil' ? <NavbarMobile /> : <NavbarDefault pagina={pagina}/>}
     </>
   );
 };

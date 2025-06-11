@@ -18,10 +18,11 @@ import './RutaPrincipal.css'
 const RutaPrincipal = ({ cargando }) => {
 
   if (cargando) return <PantallaCarga />;
+  const pagina = "principal";
 
   return (
     <>
-      <Navbar />
+      <Navbar pagina={pagina}/>
       <Home />
 
       <div className="pagina-principal">

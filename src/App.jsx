@@ -4,11 +4,10 @@ import "./App.css";
 
 // Importamos las paginas
 import RutaPrincipal from "./paginas/Principal/RutaPrincipal";
-import RutaPersonalizarToldos from "./paginas/PersonalizarToldos/RutaPersonalizarToldos";
 import RutaGaleria from "./paginas/galeria/RutaGaleria";
 
 // Contexto
-import { IdiomaProvider } from "./Contexts/IdiomaContext";
+import { IdiomaProvider } from "./contexts/IdiomaContext";
 import { useProgress } from "@react-three/drei";
 
 
@@ -28,7 +27,6 @@ const App = () => {
       <Router>
           <Routes>
             <Route path="/" element={<RutaPrincipal cargando={cargando} />} />
-            <Route path="/PersonalizarToldos" element={<RutaPersonalizarToldos />} />
             <Route path="/Galeria" element={<RutaGaleria />} />
           </Routes>
       </Router>
