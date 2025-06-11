@@ -1,7 +1,5 @@
 export const infoNuestrosTrabajos = {
-  es: {
-    titulo: "Nuestros trabajos",
-  },
+  es: { titulo: "Nuestros trabajos" },
   en: { titulo: "Our works" },
 };
 
@@ -61,7 +59,7 @@ export const imagesNuestrosTrabajos = [
       es: "Articulado Extremo",
       en: "EXTREME"
     },
-  }, 
+  },
   {
     imagen: "/assets/SliderTrabajos/Verandas/Veranda-1.jpg",
     titulo: {

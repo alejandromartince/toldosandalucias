@@ -11,8 +11,6 @@ import { imagesNuestrosTrabajos } from "../../constants/infoNuestrosTrabajos";
 //Importamos el contexto del idioma
 import { useIdioma } from "../../contexts/IdiomaContext";
 
-
-
 const CarruselTrabajos = () => {
   const trabajos = imagesNuestrosTrabajos;
   const { idioma } = useIdioma(); // Obtén el idioma desde el contexto
