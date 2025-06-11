@@ -25,6 +25,7 @@ const Galeria = () => {
         informacion: item.informacion[idioma]
     }));
 
+
     const manejarClick = (index) => {
         setActivo(prev => prev === index ? null : index);
     };

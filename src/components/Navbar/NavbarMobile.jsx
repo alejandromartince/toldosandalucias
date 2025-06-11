@@ -7,7 +7,6 @@ import { useScrollEffect } from '../../Hooks/Navbar/useScrollEffect'
 
 //Importamos los compoententes
 import SelectorIdioma from '../../components/Navbar/SelectorIdioma';
-import BotonLinea from "../Botones/BotonLinea";
 
 //Importamos la info
 import { secciones } from '../../constants/infoNavbar';
