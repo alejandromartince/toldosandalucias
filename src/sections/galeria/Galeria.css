@@ -78,16 +78,23 @@ OPCIONES CARRUSEL
   object-fit: cover;
 }
 
-.overlay-negro {
+.slide-activo {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.slide-activo::after {
   position: absolute;
   top: 0;
   left: 0;
+  content: '';
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* Opacidad ajustable */
-  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3); /* semitransparente */
+  pointer-events: none; /* para no interferir con clics */
+  border-radius: inherit; /* opcional, si usas bordes redondos */
 }
-
 
 /* ============================
 OPCIONES FOOTER GALERIA

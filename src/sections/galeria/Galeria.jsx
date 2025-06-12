@@ -20,8 +20,7 @@ const Galeria = () => {
 
     const dispositivo = useTipoDipositivo();
     const [indiceActual, setIndiceActual] = useState(0);
-    const { idioma } = useIdioma(); // o "en", según lo que uses con i18n
-
+    const { idioma } = useIdioma();
     const imagenActual = imagesNuestrosTrabajos[indiceActual];
 
     return (
@@ -44,9 +43,13 @@ const Galeria = () => {
                 </div>
             </div>
 
-                <div className='carrusel-galeria-container'>
-                    <CarruselGaleria trabajos={imagesNuestrosTrabajos} setIndiceActual={setIndiceActual} />
-                </div>
+            <div className='carrusel-galeria-container'>
+                <CarruselGaleria
+                    infoTrabajos={imagesNuestrosTrabajos}
+                    setIndiceActual={setIndiceActual}
+                    indiceActual={indiceActual}
+                />
+            </div>
         </section>
     );
 };

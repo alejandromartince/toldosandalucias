@@ -4,30 +4,31 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-const CarruselGaleria = ({ trabajos, setIndiceActual }) => {
+const CarruselGaleria = ({ infoTrabajos, setIndiceActual, indiceActual }) => {
     return (
         <Swiper
             modules={[Navigation]}
             navigation
             loop={true}
-            slidesPerView={1}
+            slidesPerView={4}
+            slidesPerGroup={1}
             onSlideChange={(swiper) => setIndiceActual(swiper.realIndex)}
             className="swiper-galeria"
         >
-            {trabajos.map((trabajo, index) => (
+            {infoTrabajos.map((trabajo, index) => (
                 <SwiperSlide key={index}>
-                    <div className="galeria-slide">
+                    <div className={`galeria-slide ${indiceActual === index ? 'slide-activo' : ''}`}>
                         <img
                             src={trabajo.imagen}
                             alt={trabajo.titulo?.es || `Trabajo ${index + 1}`}
                             className="galeria-imagen"
                         />
-                        <div className="overlay-negro" />
                     </div>
                 </SwiperSlide>
             ))}
         </Swiper>
     );
 };
+
 
 export default CarruselGaleria;
