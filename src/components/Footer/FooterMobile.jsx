@@ -14,6 +14,7 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 //Importamos los estilos
 import './FooterMobile.css'
+import RedesSociales from "./RedesSociales";
 
 const FooterMobile = () => {
 
@@ -72,15 +73,7 @@ const FooterMobile = () => {
           </div>
           <span><hr /></span>
           <div className="fm-iconos-redes">
-            <a href="https://www.facebook.com/..." target="_blank" rel="noopener noreferrer">
-              <FaFacebookF size={30} className="fm-icono-footer" color="white" />
-            </a>
-            <a href="tiktok://user/@toldos.andalucia" target="_blank" rel="noopener noreferrer">
-              <FaTiktok size={30} className="fm-icono-footer" color="white" />
-            </a>
-            <a href="instagram://user?username=toldosandalucia" target="_blank" rel="noopener noreferrer">
-              <FaInstagram size={30} className="fm-icono-footer" color="white" />
-            </a>
+            <RedesSociales />
           </div>
         </div>
       </div>
