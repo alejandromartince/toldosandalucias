@@ -12,6 +12,7 @@ import { infoPersonalizarToldos } from '../../constants/infoPersonalizarToldos';
 
 //Importamos el estilo de la pagina
 import './PersonalizarToldos.css';
+import SelectPersonalizarToldos from '../../components/PersonalizarToldos/SelectPersonalizarToldos';
 
 const PersonalizarToldos = ({ onCerrar }) => {
   const { idioma } = useIdioma();
@@ -57,6 +58,8 @@ const PersonalizarToldos = ({ onCerrar }) => {
           <div className='contenido-PersonalizarToldos-izquierda'>
             <h2>{informacion.titulo[idioma]}</h2>
             <p>{informacion.subtitulo[idioma]}</p>
+
+            <SelectPersonalizarToldos />
           </div>
 
           {/* CONTENIDO QUE SALDRA CUANDO EL FORMULARIO NO ESTE COMPLETO */}
