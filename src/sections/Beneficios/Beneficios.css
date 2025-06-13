@@ -126,7 +126,6 @@ INFORMACION CARTAS
   transform: translateY(-50%);
   background-color: aliceblue;
   padding: 2rem;
-  font-size: 0.95rem;
   height: 50%;
   width: 350px;
   box-sizing: border-box;
@@ -154,8 +153,7 @@ INFORMACION CARTAS
 
 .info-carta p {
   text-shadow: none;
-  font-size: 1rem;
-  color: black;
+  font-size: .85rem;
   text-wrap: balance;
   line-height: 1.5;
   padding-top: .5rem;
@@ -164,5 +162,4 @@ INFORMACION CARTAS
 .divBotonCartasBeneficios{
   display: flex;
   justify-content: center;
-  padding-bottom: 2rem;
 }
