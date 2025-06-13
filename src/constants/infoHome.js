@@ -2,7 +2,7 @@
 export const textoHome = {
   fondo:{
     1:"/assets/Fondo/fondo_inicio.jpeg",
-    2: "/assets/Fondo/fondo_inicio2.jpg",
+    // 2: "/assets/Fondo/fondo_inicio2.jpg",
     3: "/assets/Fondo/Fondo_inicio3.jpg"
   },
   titulo: {
