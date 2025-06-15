@@ -1,119 +1,55 @@
-import { useState } from "react";
 import Select from "react-select";
 
-//Importamos los estilos
-import "./SelectPersonalizarToldos.css";
-
-const fruitOptions = [
-  { value: "apple", label: "Apple 🍎" },
-  { value: "banana", label: "Banana 🍌" },
-  { value: "orange", label: "Orange 🍊" },
-];
-
-const colorOptions = [
-  { value: "red", label: "Red 🔴" },
-  { value: "green", label: "Green 🟢" },
-  { value: "blue", label: "Blue 🔵" },
-  { value: "blue", label: "Blue 🔵" },
-  { value: "blue", label: "Blue 🔵" },
-  { value: "blue", label: "Blue 🔵" },
-  { value: "blue", label: "Blue 🔵" },
-];
-
-const animalOptions = [
-  { value: "dog", label: "Dog 🐶" },
-  { value: "cat", label: "Cat 🐱" },
-  { value: "rabbit", label: "Rabbit 🐰" },
+const opcionesSelect1 = [
+  { value: 'organge', label: 'organge' },
+  { value: 'verde', label: 'verde' },
+  { value: 'verde2', label: 'verde' },
+  { value: 'verde3', label: 'verde' },
+  { value: 'verde4', label: 'verde' },
+  { value: 'verde5', label: 'verde' },
+  { value: 'verde6', label: 'verde' },
+  { value: 'verde7', label: 'verde' },
+  { value: 'verde8', label: 'verde' },
+  { value: 'verde9', label: 'verde' },
+  { value: 'verde0', label: 'verde' },
+  { value: 'rojo', label: 'rojo' },
 ];
 
 const SelectPersonalizarToldos = () => {
-  const [selectedFruit, setSelectedFruit] = useState(null);
-  const [selectedColor, setSelectedColor] = useState(null);
-  const [selectedAnimal, setSelectedAnimal] = useState(null);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log({
-      fruit: selectedFruit?.value,
-      color: selectedColor?.value,
-      animal: selectedAnimal?.value,
-    });
-  };
-
   return (
-    <form
-      onSubmit={handleSubmit}
-      style={{ maxWidth: 400, margin: "2rem auto" }}
-    >
-      <label>Fruit</label>
-      <Select
-        options={fruitOptions}
-        value={selectedFruit}
-        onChange={setSelectedFruit}
-        placeholder="Select a fruit"
-        isSearchable={false}
-        styles={{
-          menu: (base) => ({
-            ...base,
-            maxHeight: 150,
-            overflowY: "auto",
-          }),
-          option: (base, state) => ({
-            ...base,
-            cursor: "pointer",
-            backgroundColor: state.isFocused ? "#f0f0f0" : "white",
-            color: "black",
-          }),
-        }}
-      />
+    <Select
+      options={opcionesSelect1}
+      styles={{
+        control: (baseStyle, state) => ({ //La base principal (lo que se ve sin desplegar)
+          ...baseStyle,
+          borderColor: state.isFocused ? 'grey' : 'red',
+          backgroundColor: state.isFocused ? 'grey' : 'white',
+          cursor: 'pointer',
+        }),
+        singleValue: (base) => ({ //Opcion elegida  o por defecto
+          ...base,
+          color: 'black',
 
-      <label style={{ marginTop: "1rem" }}>Color</label>
-      <Select
-        options={colorOptions}
-        value={selectedColor}
-        onChange={setSelectedColor}
-        placeholder="Select a color"
-        styles={{
-          menu: (base) => ({
-            ...base,
-            maxHeight: 150,
-            overflowY: "auto",
-          }),
-          option: (base, state) => ({
-            ...base,
-            cursor: "pointer",
-            backgroundColor: state.isFocused ? "#f0f0f0" : "white",
-            color: "black",
-          }),
-        }}
-      />
+        }),
+        menuList: (base) => ({ //Menu donde ver las opciones
+          ...base,
+          maxHeight: '150px', 
+          overflowY: 'auto',
+        }),
 
-      <label style={{ marginTop: "1rem" }}>Animal</label>
-      <Select
-        options={animalOptions}
-        value={selectedAnimal}
-        onChange={setSelectedAnimal}
-        placeholder="Select an animal"
-        isDisabled={true}
-        styles={{
-          menu: (base) => ({
-            ...base,
-            maxHeight: 150,
-            overflowY: "auto",
-          }),
-          option: (base, state) => ({
-            ...base,
-            cursor: "pointer",
-            backgroundColor: state.isFocused ? "#f0f0f0" : "white",
-            color: "black",
-          }),
-        }}
-      />
+        input: (base) => ({ //Cursor
+          ...base,
+          color: 'black',
+        }),
+        option: (base, state) => ({ //Opciones del select
+          ...base,
+          color: 'black',
+          backgroundColor: state.isFocused ? '#f0f0f0' : 'white',
+          cursor: 'pointer',
 
-      <button type="submit" style={{ marginTop: "1rem" }}>
-        Submit
-      </button>
-    </form>
+        }),
+      }}
+    />
   );
 };
 

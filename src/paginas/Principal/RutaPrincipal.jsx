@@ -8,11 +8,13 @@ import NuestrosTrabajos from "../../sections/nuestrosTrabajos/nuestrosTrabajos"
 import Contacto from "../../sections/contacto/Contacto"
 import Footer from "../../sections/footer/Footer"
 
+
 //Importamos los hooks
 import PantallaCarga from "../../components/General/PantallaCarga"
 
 //Importamos los estilos
 import './RutaPrincipal.css'
+import SelectPersonalizarToldos from "../../components/PersonalizarToldos/SelectPersonalizarToldos"
 
 // Componente que gestiona la ruta principal con lógica de carga
 const RutaPrincipal = ({ cargando }) => {
@@ -22,9 +24,8 @@ const RutaPrincipal = ({ cargando }) => {
 
   return (
     <>
-      <Navbar pagina={pagina}/>
+      <Navbar pagina={pagina} />
       <Home />
-
       <div className="pagina-principal">
         <Historia />
         <NuestrosTrabajos />

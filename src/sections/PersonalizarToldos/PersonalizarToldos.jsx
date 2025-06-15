@@ -10,9 +10,10 @@ import BotonCerrarMenu from '../../components/Botones/BotonCerrarMenu';
 //Importamos la informacion
 import { infoPersonalizarToldos } from '../../constants/infoPersonalizarToldos';
 
+import SelectPersonalizarToldos from "../../components/PersonalizarToldos/SelectPersonalizarToldos"
+
 //Importamos el estilo de la pagina
 import './PersonalizarToldos.css';
-import SelectPersonalizarToldos from '../../components/PersonalizarToldos/SelectPersonalizarToldos';
 
 const PersonalizarToldos = ({ onCerrar }) => {
   const { idioma } = useIdioma();
@@ -36,7 +37,7 @@ const PersonalizarToldos = ({ onCerrar }) => {
     document.body.style.overflow = 'hidden';
 
     // Evitar scroll externo desde dentro del popup
-    const popup = document.querySelector('.popup-contenido-prueba');
+    const popup = document.querySelector('.contenido-PersonalizarToldos-derecha');
     const handleWheel = (e) => {
       e.preventDefault(); // Bloquea el scroll fuera del popup
     };
@@ -52,24 +53,22 @@ const PersonalizarToldos = ({ onCerrar }) => {
 
 
   return (
-    <div >
-      <div className={`menu-main ${cerrando ? 'salida' : ''}`}>
-        <div className={`popup-contenido-prueba ${cerrando ? 'salida' : ''}`}>
-          <div className='contenido-PersonalizarToldos-izquierda'>
-            <h2>{informacion.titulo[idioma]}</h2>
-            <p>{informacion.subtitulo[idioma]}</p>
+    <div className={`menu-main ${cerrando ? 'salida' : ''}`}>
+      <div className={`popup-contenido-prueba ${cerrando ? 'salida' : ''}`}>
+        <div className='contenido-PersonalizarToldos-izquierda'>
+          <h2>{informacion.titulo[idioma]}</h2>
+          <p>{informacion.subtitulo[idioma]}</p>
 
-            <SelectPersonalizarToldos />
-          </div>
+          <SelectPersonalizarToldos />
+        </div>
 
-          {/* CONTENIDO QUE SALDRA CUANDO EL FORMULARIO NO ESTE COMPLETO */}
-          <div className='contenido-PersonalizarToldos-derecha'>
-            <div className='contenido-bloqueado'>
-              <div className='contenedor-Boton'>
-                <BotonCerrarMenu onClick={() => setCerrando(true)} />
-              </div>
-              <p>{informacion.descripcion[idioma]}</p>
+        {/* CONTENIDO QUE SALDRA CUANDO EL FORMULARIO NO ESTE COMPLETO */}
+        <div className='contenido-PersonalizarToldos-derecha'>
+          <div className='contenido-bloqueado'>
+            <div className='contenedor-Boton'>
+              <BotonCerrarMenu onClick={() => setCerrando(true)} />
             </div>
+            <p>{informacion.descripcion[idioma]}</p>
           </div>
         </div>
       </div>
